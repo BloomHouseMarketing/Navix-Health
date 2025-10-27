@@ -1,0 +1,79 @@
+<div id='header'>
+  <div id='banner'>
+    <input type='checkbox' id='banner-checkbox' />
+    <div id='banner-inside'>
+      <p>
+        <a
+          href='https://www.startengine.com/offering/navixhealth'
+          target='_blank'
+          >The Navix Health funding round is now live to the public. Invest
+          today &rarr;</a
+        >
+      </p>
+      <label for='banner-checkbox'>
+        <span>×</span>
+      </label>
+    </div>
+  </div>
+</div>
+
+<style>
+  #banner-checkbox {
+    display: none;
+  }
+
+  #banner {
+    background: linear-gradient(to right, #a28292, #c2996c);
+    min-height: 48px;
+    margin-top: -69px;
+    animation: banner-appear 1s 1s linear forwards;
+  }
+
+  #banner-inside {
+    display: flex;
+    align-items: center;
+    flex: 1;
+    transition: 1s;
+    min-height: 64px;
+  }
+
+  #banner p {
+    margin: 0;
+    color: white;
+    font-family: sans-serif;
+    flex: 1;
+  }
+
+  #banner p a {
+    display: block;
+    color: white;
+    text-decoration: none;
+    flex: 1;
+    padding-left: 24px;
+  }
+
+  #banner label {
+    color: white;
+    font-family: sans-serif;
+    padding: 0 24px;
+    line-height: 64px;
+    display: block;
+    font-size: 24px;
+    cursor: pointer;
+    transition: 0.25s;
+    font-weight: 300;
+  }
+  #banner label:hover {
+    opacity: 0.64;
+  }
+
+  #banner-checkbox:checked + #banner-inside {
+    margin-top: -69px;
+  }
+
+  @keyframes banner-appear {
+    to {
+      margin: 0;
+    }
+  }
+</style>

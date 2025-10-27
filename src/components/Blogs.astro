@@ -1,0 +1,233 @@
+---
+import data from '../../navixBlogs.json';
+
+const items = data.items.sort(
+  (a, b) =>
+    new Date(b.fieldData['publish-date']).getTime() -
+    new Date(a.fieldData['publish-date']).getTime()
+);
+
+const images = import.meta.glob<{ default: ImageMetadata }>(
+  '/src/assets/images/blogImages/*.{jpeg,jpg,png,gif,webp}'
+);
+
+async function resolveImages() {
+  const resolvedImages = {};
+  for (const path in images) {
+    const imageModule = await images[path]();
+    const filename = path.split('/').pop();
+    const slug = filename.replace(/\.(jpeg|jpg|png|gif|webp)$/, '');
+    resolvedImages[slug] = imageModule.default;
+  }
+  return resolvedImages;
+}
+
+const resolvedImages = await resolveImages();
+---
+
+<main class='main-wrapper'>
+  <section class='section-hero-blog'>
+    <div class='padding-global padding-section-medium cc-blog'>
+      <div class='w-layout-blockcontainer container w-container'>
+        <div class='blog-head-wrapper'>
+          <div class='blog-hero-block'>
+            <h1 class='blog-heading'>Blogs</h1>
+            <div class='blog-subblock'>
+              <div class='blog-subhead'>
+                Behavioral Health is a Journey.<br />We’re here to guide you.
+              </div>
+              <p class='text-size-small'>
+                At Navix Health, we are committed to demystifying and
+                streamlining the logistical side of behavioral health. We use
+                this space to share industry news, updates and insights that
+                help behavioral healthcare practitioners deliver the best
+                patient care possible.
+              </p>
+            </div>
+          </div>
+          <div class='div-block'></div>
+        </div>
+        <div class='top-blog-wrapper'>
+          <div class='collection-list w-dyn-list'>
+            {
+              items.map((item) => {
+                const slug = item.fieldData.slug;
+                const image = resolvedImages[slug];
+                return (
+                  <div role='listitem' class='collection-block w-dyn-item'>
+                    <a href={`/blogs/${slug}`} class='w-inline-block'>
+                      <img
+                        loading='lazy'
+                        src={image.src}
+                        alt={item.fieldData['main-img'].alt || 'blog image'}
+                      />
+                    </a>
+                    <div class='blog-date-block'>
+                      <div class='text-size-small'>
+                        {new Date(
+                          item.fieldData['publish-date']
+                        ).toLocaleDateString()}
+                      </div>
+                      <div class='dot w-embed' />
+                      <div class='text-size-small'>
+                        {item.fieldData['read-time']}
+                      </div>
+                    </div>
+                    <a
+                      href={`/blogs/${item.fieldData.slug}`}
+                      class='blog-head-link w-inline-block'
+                    >
+                      <h2 class='blog-name'>{item.fieldData.name}</h2>
+                    </a>
+                    <p class='text-size-small cc-blog-opacity'>
+                      {item.fieldData['blog-content']}
+                    </p>
+                  </div>
+                );
+              })
+            }
+          </div>
+          <div style='display: block; margin: 0 auto; text-align: center;'>
+            <button id='loadMore' class='trial-btn'>Load More &darr;</button>
+          </div>
+        </div>
+        <div class='inbox-wrapper' style='margin-top: 100px;'>
+          <div class='inbox-content-block'>
+            <h2 class='inobx-health'>Get Navix Health in your inbox</h2>
+            <p class='text-size-small cc-blog-opacity cc-color'>
+              You will get industry news, updates and insights that help
+              behavioral healthcare practitioners deliver the best patient care
+              possible.
+            </p>
+            <div class='form-block-2 w-form'>
+              <form
+                id='email-form'
+                name='email-form'
+                class='form-2'
+                action='https://formspree.io/f/xbjnoldn'
+                method='POST'
+              >
+                <input
+                  class='text-field-2 w-input'
+                  maxlength='256'
+                  name='email'
+                  placeholder='Enter your email'
+                  type='email'
+                  id='email'
+                  required=''
+                />
+                <input
+                  type='submit'
+                  data-wait='Please wait...'
+                  class='submit-button-2 w-button'
+                  value='Subscribe'
+                />
+              </form>
+              <div class='w-form-done'>
+                <div>Thank you! Your submission has been received!</div>
+              </div>
+              <div class='w-form-fail'>
+                <div>Oops! Something went wrong while submitting the form.</div>
+              </div>
+            </div>
+          </div>
+          <div class='inbox-img-block'>
+            <img src='images/Group-1000000891-2.png' loading='eager' alt='' />
+            <div class='html-embed-25 w-embed'>
+              <svg
+                xmlns='http://www.w3.org/2000/svg'
+                width='74'
+                height='74'
+                viewBox='0 0 74 74'
+                fill='none'
+              >
+                <g clip-path='url(#clip0_765_1734)'>
+                  <path
+                    d='M49.8045 29.1026L47.5622 12.0845L34.0297 22.6446L43.7687 21.3508L49.8045 29.1026Z'
+                    fill='#A18192'></path>
+                  <path
+                    d='M24.6807 45.4795L26.9229 62.4976L40.4555 51.9375L30.7165 53.2313L24.6807 45.4795Z'
+                    fill='#9CB6B0'></path>
+                  <path
+                    d='M29.0567 24.7291L12.0386 26.9714L22.5987 40.5039L21.3049 30.7649L29.0567 24.7291Z'
+                    fill='#374651'></path>
+                  <path
+                    d='M51.8906 34.0784L53.1845 43.8174L45.4326 49.8532L62.5059 47.6335L51.8906 34.0784Z'
+                    fill='#C2986C'></path>
+                </g>
+                <defs>
+                  <clippath id='clip0_765_1734'>
+                    <rect
+                      width='56.2025'
+                      height='56.2025'
+                      fill='white'
+                      transform='translate(21.8711 0.580078) rotate(22.2636)'
+                    ></rect>
+                  </clippath>
+                </defs>
+              </svg>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<script is:inline>
+  document.addEventListener('DOMContentLoaded', function () {
+    let itemsDisplayed = 8;
+    const items = [
+      ...document.querySelectorAll('.collection-block.w-dyn-item'),
+    ];
+    const loadMoreButton = document.getElementById('loadMore');
+
+    items.forEach((item, index) => {
+      if (index >= itemsDisplayed) item.style.display = 'none';
+    });
+
+    loadMoreButton.addEventListener('click', () => {
+      const newLimit = itemsDisplayed + 8;
+      items.forEach((item, index) => {
+        if (index < newLimit) item.style.display = 'block';
+      });
+      itemsDisplayed = newLimit;
+
+      if (itemsDisplayed >= items.length) loadMoreButton.style.display = 'none';
+    });
+
+    var footerForm = document.getElementById('email-form');
+    footerForm.addEventListener('submit', function (event) {
+      event.preventDefault();
+
+      var formData = new FormData(footerForm);
+
+      fetch(footerForm.action, {
+        method: 'POST',
+        body: formData,
+        headers: {
+          Accept: 'application/json',
+        },
+      })
+        .then((response) => {
+          if (response.ok) {
+            footerForm.reset();
+            document.querySelector('.w-form-done').style.display = 'block';
+            document.querySelector('.w-form-fail').style.display = 'none';
+          } else {
+            return response.json().then((data) => {
+              if (data.errors) {
+                console.log('Validation errors:', data.errors);
+              }
+              throw new Error('Form submission error');
+            });
+          }
+        })
+        .catch((error) => {
+          console.error('Error:', error);
+          document.querySelector('.w-form-done').style.display = 'none';
+          document.querySelector('.w-form-fail').style.display = 'block';
+        });
+    });
+  });
+</script>

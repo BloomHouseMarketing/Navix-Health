@@ -1,0 +1,18 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import BlogsPage from '../../components/Blogs.astro';
+---
+
+<Layout
+  title='Navix Health | Blogs'
+  description='Navix Health is a seamless software platform designed by and for behavioral health professionals.'
+  canonical='https://navixhealth.com/blogs'
+  openGraph={{
+    url: 'https://navixhealth.com/blogs',
+    title: 'Navix Health | Blogs',
+    description:
+      'Navix Health is a seamless software platform designed by and for behavioral health professionals.',
+  }}
+>
+  <BlogsPage />
+</Layout>

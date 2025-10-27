@@ -1,0 +1,423 @@
+---
+import { Image } from 'astro:assets';
+import navixLogoImg from '../../assets/images/navix-health.png';
+---
+
+<div class='global-styles w-embed'>
+  <style>
+    /* Make text look crisper and more legible in all browsers */
+    body {
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      font-smoothing: antialiased;
+      text-rendering: optimizeLegibility;
+    }
+    /* Focus state style for keyboard navigation for the focusable elements */
+    *[tabindex]:focus-visible,
+    input[type='file']:focus-visible {
+      outline: 0.125rem solid #4d65ff;
+      outline-offset: 0.125rem;
+    }
+    /* Get rid of top margin on first element in any rich text element */
+    .w-richtext > :not(div):first-child,
+    .w-richtext > div:first-child > :first-child {
+      margin-top: 0 !important;
+    }
+    /* Get rid of bottom margin on last element in any rich text element */
+    .w-richtext > :last-child,
+    .w-richtext ol li:last-child,
+    .w-richtext ul li:last-child {
+      margin-bottom: 0 !important;
+    }
+    /* Prevent all click and hover interaction with an element */
+    .pointer-events-off {
+      pointer-events: none;
+    }
+    /* Enables all click and hover interaction with an element */
+    .pointer-events-on {
+      pointer-events: auto;
+    }
+    /* Create a class of .div-square which maintains a 1:1 dimension of a div */
+    .div-square::after {
+      content: '';
+      display: block;
+      padding-bottom: 100%;
+    }
+    /* Make sure containers never lose their center alignment */
+    .container-medium,
+    .container-small,
+    .container-large {
+      margin-right: auto !important;
+      margin-left: auto !important;
+    }
+    /* 
+Make the following elements inherit typography styles from the parent and not have hardcoded values. 
+Important: You will not be able to style for example "All Links" in Designer with this CSS applied.
+Uncomment this CSS to use it in the project. Leave this message for future hand-off.
+*/
+    /*
+a,
+.w-input,
+.w-select,
+.w-tab-link,
+.w-nav-link,
+.w-dropdown-btn,
+.w-dropdown-toggle,
+.w-dropdown-link {
+color: inherit;
+text-decoration: inherit;
+font-size: inherit;
+}
+*/
+    /* Apply "..." after 3 lines of text */
+    .text-style-3lines {
+      display: -webkit-box;
+      overflow: hidden;
+      -webkit-line-clamp: 3;
+      -webkit-box-orient: vertical;
+    }
+    /* Apply "..." after 2 lines of text */
+    .text-style-2lines {
+      display: -webkit-box;
+      overflow: hidden;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+    }
+    /* Adds inline flex display */
+    .display-inlineflex {
+      display: inline-flex;
+    }
+    /* These classes are never overwritten */
+    .hide {
+      display: none !important;
+    }
+    @media screen and (max-width: 991px) {
+      .hide,
+      .hide-tablet {
+        display: none !important;
+      }
+    }
+    @media screen and (max-width: 767px) {
+      .hide-mobile-landscape {
+        display: none !important;
+      }
+    }
+    @media screen and (max-width: 479px) {
+      .hide-mobile {
+        display: none !important;
+      }
+    }
+    .margin-0 {
+      margin: 0rem !important;
+    }
+    .padding-0 {
+      padding: 0rem !important;
+    }
+    .spacing-clean {
+      padding: 0rem !important;
+      margin: 0rem !important;
+    }
+    .margin-top {
+      margin-right: 0rem !important;
+      margin-bottom: 0rem !important;
+      margin-left: 0rem !important;
+    }
+    .padding-top {
+      padding-right: 0rem !important;
+      padding-bottom: 0rem !important;
+      padding-left: 0rem !important;
+    }
+    .margin-right {
+      margin-top: 0rem !important;
+      margin-bottom: 0rem !important;
+      margin-left: 0rem !important;
+    }
+    .padding-right {
+      padding-top: 0rem !important;
+      padding-bottom: 0rem !important;
+      padding-left: 0rem !important;
+    }
+    .margin-bottom {
+      margin-top: 0rem !important;
+      margin-right: 0rem !important;
+      margin-left: 0rem !important;
+    }
+    .padding-bottom {
+      padding-top: 0rem !important;
+      padding-right: 0rem !important;
+      padding-left: 0rem !important;
+    }
+    .margin-left {
+      margin-top: 0rem !important;
+      margin-right: 0rem !important;
+      margin-bottom: 0rem !important;
+    }
+    .padding-left {
+      padding-top: 0rem !important;
+      padding-right: 0rem !important;
+      padding-bottom: 0rem !important;
+    }
+    .margin-horizontal {
+      margin-top: 0rem !important;
+      margin-bottom: 0rem !important;
+    }
+    .padding-horizontal {
+      padding-top: 0rem !important;
+      padding-bottom: 0rem !important;
+    }
+    .margin-vertical {
+      margin-right: 0rem !important;
+      margin-left: 0rem !important;
+    }
+    .padding-vertical {
+      padding-right: 0rem !important;
+      padding-left: 0rem !important;
+    }
+  </style>
+</div>
+<div
+  data-animation='default'
+  class='navbar w-nav'
+  data-easing2='ease'
+  fs-scrolldisable-element='smart-nav'
+  data-easing='ease'
+  data-collapse='medium'
+  data-w-id='c852e711-db62-2e1d-c61b-d0a4bea240d2'
+  role='banner'
+  data-duration='400'
+>
+  <div class='container'>
+    <div class='html-embed-38 w-embed'>
+      <style>
+        @media only screen and (max-width: 991px) {
+          .nav-menu-wrapper {
+            min-height: calc(100vh - 72px);
+          }
+          .w-nav-overlay {
+            height: 100% !important;
+            overflow: visible !important;
+          }
+        }
+      </style>
+    </div>
+    <div class='navbar-wrapper'>
+      <a
+        href='/'
+        aria-current='page'
+        class='navbar-brand w-nav-brand w--current'
+      >
+        <Image
+          src={navixLogoImg}
+          style='width: 170px; height: auto;'
+          alt='Navix AI Logo'
+          loading='eager'
+        />
+      </a>
+      <nav role='navigation' class='nav-menu-wrapper w-nav-menu'>
+        <div class='nav-menu-block'>
+          <ul role='list' class='nav-menu w-list-unstyled'>
+            <li class='list-item'>
+              <div
+                data-hover='false'
+                data-delay='255'
+                class='nav-dropdown w-dropdown'
+              >
+                <div class='nav-dropdown-toggle w-dropdown-toggle'>
+                  <div class='nav-dropdown-icon w-icon-dropdown-toggle'></div>
+                  <div class='nav-text'>Products</div>
+                </div>
+                <nav
+                  class='nav-dropdown-list shadow-three mobile-shadow-hide w-dropdown-list'
+                >
+                  <div class='products-dropdown-grid'>
+                    <div class='dropdown-column'>
+                      <div class='column-title'>Professionals</div>
+                      <a
+                        href='/professionals/private-practice'
+                        class='nav-dropdown-link w-dropdown-link'
+                        >Private Practice</a
+                      >
+                      <a
+                        href='/professionals/small-group-practice'
+                        class='nav-dropdown-link w-dropdown-link'
+                        >Small Group Practice</a
+                      >
+                      <a
+                        href='/professionals/interventionist'
+                        class='nav-dropdown-link w-dropdown-link'
+                        >Interventionist</a
+                      >
+                      <a
+                        href='/professionals/case-management'
+                        class='nav-dropdown-link w-dropdown-link'
+                        >Case Management</a
+                      >
+                    </div>
+                    <div class='dropdown-column'>
+                      <div class='column-title'>Facilities</div>
+                      <a
+                        href='/facilities/residential-treatment-centers'
+                        class='nav-dropdown-link w-dropdown-link'
+                        >Residential Treatment Centers</a
+                      >
+                      <a
+                        href='/facilities/detox-facilities'
+                        class='nav-dropdown-link w-dropdown-link'
+                        >Detox Facilities</a
+                      >
+                      <a
+                        href='/facilities/iop-php'
+                        class='nav-dropdown-link w-dropdown-link'>IOP / PHP</a
+                      >
+                      <a
+                        href='/facilities/sober-living'
+                        class='nav-dropdown-link w-dropdown-link'
+                        >Sober living</a
+                      >
+                    </div>
+                  </div>
+                </nav>
+              </div>
+            </li>
+            <li class='list-item'>
+              <div
+                data-hover='false'
+                data-delay='255'
+                class='nav-dropdown w-dropdown'
+              >
+                <div class='nav-dropdown-toggle w-dropdown-toggle'>
+                  <div class='nav-dropdown-icon w-icon-dropdown-toggle'></div>
+                  <div class='nav-text'>AI Tools</div>
+                </div>
+                <nav
+                  class='nav-dropdown-list shadow-three mobile-shadow-hide w-dropdown-list'
+                >
+                  <a href='/navix-ai' class='nav-dropdown-link w-dropdown-link'
+                    >NavixAI</a
+                  >
+                  <a
+                    href='/navixscribe'
+                    class='nav-dropdown-link w-dropdown-link'>NavixScribe</a
+                  >
+                </nav>
+              </div>
+            </li>
+            <li class='list-item cc-first'>
+              <a href='/pricing' class='nav-text'>Plans &amp; Pricing</a>
+            </li>
+            <li class='list-item'>
+              <div
+                data-hover='false'
+                data-delay='255'
+                class='nav-dropdown w-dropdown'
+              >
+                <div class='nav-dropdown-toggle w-dropdown-toggle'>
+                  <div class='nav-dropdown-icon w-icon-dropdown-toggle'></div>
+                  <div class='nav-text'>Company</div>
+                </div>
+                <nav
+                  class='nav-dropdown-list shadow-three mobile-shadow-hide w-dropdown-list'
+                >
+                  <a href='/about-us' class='nav-dropdown-link w-dropdown-link'
+                    >About us</a
+                  >
+                  <a href='/contact' class='nav-dropdown-link w-dropdown-link'
+                    >Contact Us</a
+                  >
+                </nav>
+              </div>
+            </li>
+            <li class='list-item'>
+              <div
+                data-hover='false'
+                data-delay='255'
+                class='nav-dropdown w-dropdown'
+              >
+                <div class='nav-dropdown-toggle w-dropdown-toggle'>
+                  <div class='nav-dropdown-icon w-icon-dropdown-toggle'></div>
+                  <div class='nav-text'>Resources</div>
+                </div>
+                <nav
+                  class='nav-dropdown-list shadow-three mobile-shadow-hide w-dropdown-list'
+                >
+                  <a href='/blogs' class='nav-dropdown-link w-dropdown-link'
+                    >Blogs</a
+                  >
+                  <a href='/news' class='nav-dropdown-link w-dropdown-link'
+                    >News &amp; Articles</a
+                  >
+                </nav>
+              </div>
+            </li>
+            <a href='/start-free-trial' class='trial-btn w-button'>Contact Us</a
+            >
+            <a href='https://app.navix.ai/login' class='trial-btn w-button'
+              >Log in to Navix AI &rarr;</a
+            >
+          </ul>
+        </div>
+      </nav>
+      <div class='menu-button w-nav-button'>
+        <div class='open-btn w-embed'>
+          <svg
+            xmlns='http://www.w3.org/2000/svg'
+            width='32'
+            height='32'
+            viewBox='0 0 32 32'
+            fill='none'
+          >
+            <line
+              x1='7'
+              y1='8'
+              x2='25'
+              y2='8'
+              stroke='#374651'
+              stroke-width='2'
+              stroke-linecap='square'></line>
+            <line
+              x1='7'
+              y1='22'
+              x2='25'
+              y2='22'
+              stroke='#374651'
+              stroke-width='2'
+              stroke-linecap='square'></line>
+            <line
+              x1='13'
+              y1='15'
+              x2='25'
+              y2='15'
+              stroke='#374651'
+              stroke-width='2'
+              stroke-linecap='square'></line>
+          </svg>
+        </div>
+        <div class='close-btn w-embed'>
+          <svg
+            xmlns='http://www.w3.org/2000/svg'
+            width='32'
+            height='32'
+            viewBox='0 0 32 32'
+            fill='none'
+          >
+            <line
+              x1='9.42969'
+              y1='22.3642'
+              x2='22.8647'
+              y2='8.92915'
+              stroke='#374651'
+              stroke-linecap='square'></line>
+            <line
+              x1='9.91421'
+              y1='9'
+              x2='22.6421'
+              y2='21.7279'
+              stroke='#374651'
+              stroke-width='2'
+              stroke-linecap='square'></line>
+          </svg>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

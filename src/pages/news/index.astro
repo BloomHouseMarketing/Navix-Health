@@ -1,0 +1,18 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import NewsPage from '../../components/News.astro';
+---
+
+<Layout
+  title='Navix Health | News'
+  description='Navix Health is a seamless software platform designed by and for behavioral health professionals.'
+  canonical='https://navixhealth.com/news'
+  openGraph={{
+    url: 'https://navixhealth.com/news',
+    title: 'Navix Health | News',
+    description:
+      'Navix Health is a seamless software platform designed by and for behavioral health professionals.',
+  }}
+>
+  <NewsPage />
+</Layout>

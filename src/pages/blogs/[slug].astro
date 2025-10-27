@@ -1,0 +1,243 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import data from '../../../navixBlogs.json';
+
+interface BlogPost {
+  slug: string;
+  name: string;
+  content: string;
+  'main-img': {
+    url: string;
+    alt?: string;
+  };
+  'publish-date': string;
+  'read-time': string;
+}
+
+export async function getStaticPaths() {
+  const items: { fieldData: BlogPost }[] = data.items;
+
+  const paths = items.map((item) => ({
+    params: { slug: item.fieldData.slug },
+    props: { ...item.fieldData },
+  }));
+
+  return paths;
+}
+
+const {
+  slug,
+  name,
+  content,
+  'main-img': mainImg,
+  'publish-date': publishDate,
+  'read-time': readTime,
+} = Astro.props as BlogPost;
+
+const images = import.meta.glob<{ default: ImageMetadata }>(
+  '/src/assets/images/blogImages/*.{jpeg,jpg,png,gif,webp}'
+);
+
+let image = null;
+
+for (const path in images) {
+  if (path.includes(slug)) {
+    image = (await images[path]()).default;
+    break;
+  }
+}
+---
+
+<Layout
+  title={`Navix Health | ${name}`}
+  description='Navix Health is a seamless software platform designed by and for behavioral health professionals.'
+  canonical={`https://navixhealth.com/blogs/${Astro.props.slug}`}
+  openGraph={{
+    url: `https://navixhealth.com/blogs/${Astro.props.slug}`,
+    title: `Navix Health | ${name}`,
+    description:
+      'Navix Health is a seamless software platform designed by and for behavioral health professionals.',
+  }}
+>
+  <main class='main-wrapper'>
+    <section class='section-inner-blog'>
+      <div class='padding-global padding-section-medium cc-inner-blog'>
+        <div class='w-layout-blockcontainer container w-container'>
+          <div class='inner-blog-wrapper'>
+            <div class='inner-blog-date'>
+              <div class='inner-blog-text'>
+                {new Date(publishDate).toLocaleDateString()}
+              </div>
+              <div class='dot w-embed'>
+                <svg
+                  xmlns='http://www.w3.org/2000/svg'
+                  width='20'
+                  height='20'
+                  viewBox='0 0 20 20'
+                  fill='none'
+                >
+                  <circle cx='10' cy='10' r='3' fill='#D9D9D9'></circle>
+                </svg>
+              </div>
+              <div class='inner-blog-text'>{readTime}</div>
+            </div>
+            <h1 class='inner-blog-heading'>{name}</h1>
+            <img
+              alt={mainImg.alt || 'Blog Post Image'}
+              loading='lazy'
+              src={image ? image.src : mainImg.url}
+              class='image-46'
+            />
+            <div class='inner-blog-wrap'>
+              <div class='inner-blog-content w-richtext' set:html={content} />
+              <div class='divider-blog'></div>
+              <div class='helpful-wrap'>
+                <div class='helpful-text'>Was this helpful?</div>
+                <div class='like-btn-block'>
+                  <a href='#' class='w-inline-block'>
+                    <div class='like-btn w-embed'>
+                      <svg
+                        xmlns='http://www.w3.org/2000/svg'
+                        width='24'
+                        height='24'
+                        viewBox='0 0 24 24'
+                        fill='none'
+                      >
+                        <g clip-path='url(#clip0_768_2792)'>
+                          <path
+                            d='M3 9.75006H7.5V19.5001H3C2.80109 19.5001 2.61032 19.421 2.46967 19.2804C2.32902 19.1397 2.25 18.949 2.25 18.7501V10.5001C2.25 10.3011 2.32902 10.1104 2.46967 9.96973C2.61032 9.82908 2.80109 9.75006 3 9.75006Z'
+                            stroke='#A28292'
+                            stroke-width='2'
+                            stroke-linecap='round'
+                            stroke-linejoin='round'></path>
+                          <path
+                            d='M7.5 9.75006L11.25 2.25006C12.0456 2.25006 12.8087 2.56613 13.3713 3.12874C13.9339 3.69135 14.25 4.45441 14.25 5.25006V7.50006H20.25C20.4628 7.50012 20.6731 7.54545 20.867 7.63303C21.0609 7.72062 21.234 7.84846 21.3747 8.00806C21.5154 8.16767 21.6206 8.35538 21.6832 8.55874C21.7458 8.7621 21.7644 8.97645 21.7378 9.18756L20.6128 18.1876C20.5672 18.55 20.3908 18.8833 20.1169 19.1249C19.843 19.3666 19.4903 19.5 19.125 19.5001H7.5'
+                            stroke='#A28292'
+                            stroke-width='2'
+                            stroke-linecap='round'
+                            stroke-linejoin='round'></path>
+                        </g>
+                        <defs>
+                          <clippath id='clip0_768_2792'>
+                            <rect width='24' height='24' fill='white'></rect>
+                          </clippath>
+                        </defs>
+                      </svg>
+                    </div>
+                  </a>
+                  <a href='#' class='w-inline-block'>
+                    <div class='like-btn w-embed'>
+                      <svg
+                        xmlns='http://www.w3.org/2000/svg'
+                        width='24'
+                        height='24'
+                        viewBox='0 0 24 24'
+                        fill='none'
+                      >
+                        <g clip-path='url(#clip0_768_2797)'>
+                          <path
+                            d='M3 4.50006H7.5V14.2501H3C2.80109 14.2501 2.61032 14.171 2.46967 14.0304C2.32902 13.8897 2.25 13.699 2.25 13.5001V5.25006C2.25 5.05115 2.32902 4.86038 2.46967 4.71973C2.61032 4.57908 2.80109 4.50006 3 4.50006Z'
+                            stroke='#A28292'
+                            stroke-width='2'
+                            stroke-linecap='round'
+                            stroke-linejoin='round'></path>
+                          <path
+                            d='M7.5 14.2501L11.25 21.7501C12.0456 21.7501 12.8087 21.434 13.3713 20.8714C13.9339 20.3088 14.25 19.5457 14.25 18.7501V16.5001H20.25C20.4628 16.5 20.6731 16.4547 20.867 16.3671C21.0609 16.2795 21.234 16.1517 21.3747 15.9921C21.5154 15.8325 21.6206 15.6447 21.6832 15.4414C21.7458 15.238 21.7644 15.0237 21.7378 14.8126L20.6128 5.81256C20.5672 5.45015 20.3908 5.11685 20.1169 4.8752C19.843 4.63355 19.4903 4.50016 19.125 4.50006H7.5'
+                            stroke='#A28292'
+                            stroke-width='2'
+                            stroke-linecap='round'
+                            stroke-linejoin='round'></path>
+                        </g>
+                        <defs>
+                          <clippath id='clip0_768_2797'>
+                            <rect width='24' height='24' fill='white'></rect>
+                          </clippath>
+                        </defs>
+                      </svg>
+                    </div>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class='divider-blog cc-margin'></div>
+            <div class='related-blog-wrapper'>
+              <div class='related-blog-wrap'>
+                <h2 class='related-head'>Related</h2>
+                <h2 class='related-head cc-fontsize'>Blogs</h2>
+                <a href='/blogs' class='blog-link w-inline-block'>
+                  <div class='blog-text'>View all</div>
+                  <div class='html-embed-27 w-embed'>
+                    <svg
+                      xmlns='http://www.w3.org/2000/svg'
+                      width='16'
+                      height='16'
+                      viewBox='0 0 16 16'
+                      fill='none'
+                    >
+                      <g clip-path='url(#clip0_768_2830)'>
+                        <path
+                          d='M4 12L12 4'
+                          stroke='#374651'
+                          stroke-width='1.5'
+                          stroke-linecap='round'
+                          stroke-linejoin='round'></path>
+                        <path
+                          d='M5.5 4H12V10.5'
+                          stroke='#374651'
+                          stroke-width='1.5'
+                          stroke-linecap='round'
+                          stroke-linejoin='round'></path>
+                      </g>
+                      <defs>
+                        <clippath id='clip0_768_2830'>
+                          <rect
+                            width='16'
+                            height='16'
+                            fill='white'
+                            transform='matrix(1 0 0 -1 0 16)'></rect>
+                        </clippath>
+                      </defs>
+                    </svg>
+                  </div>
+                </a>
+              </div>
+              <div class='collection-list-wrapper w-dyn-list'>
+                <div role='list' class='collection-list-2 w-dyn-items'>
+                  <div role='listitem' class='collection-item w-dyn-item'>
+                    <a href='#' class='w-inline-block'
+                      ><img alt='' loading='lazy' src='' class='img' /></a
+                    >
+                    <div class='related-blog-content'>
+                      <div class='inner-blog-date'>
+                        <div class='inner-blog-text'></div>
+                        <div class='dot w-embed'>
+                          <svg
+                            xmlns='http://www.w3.org/2000/svg'
+                            width='20'
+                            height='20'
+                            viewBox='0 0 20 20'
+                            fill='none'
+                          >
+                            <circle cx='10' cy='10' r='3' fill='#D9D9D9'
+                            ></circle>
+                          </svg>
+                        </div>
+                        <div class='inner-blog-text'></div>
+                      </div>
+                      <a href='#' class='blog-head-link w-inline-block'>
+                        <h2 class='inner-blog-heading cc-size'></h2>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+                <div class='w-dyn-empty'>
+                  <div>No items found.</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+</Layout>

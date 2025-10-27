@@ -1,0 +1,119 @@
+---
+import data from '../../navixNews.json';
+
+const items = data.items.sort(
+  (a, b) =>
+    new Date(b.fieldData.date).getTime() - new Date(a.fieldData.date).getTime()
+);
+
+const images = import.meta.glob<{ default: ImageMetadata }>(
+  '/src/assets/images/newsImages/*.{jpeg,jpg,png,gif,webp}'
+);
+
+async function resolveImages() {
+  const resolvedImages = {};
+  for (const path in images) {
+    const imageModule = await images[path]();
+    const filename = path.split('/').pop();
+    const [slug, type] = filename
+      .replace(/\.(jpeg|jpg|png|gif|webp)$/, '')
+      .split('-');
+    if (!resolvedImages[slug]) {
+      resolvedImages[slug] = {};
+    }
+    resolvedImages[slug][type] = imageModule.default;
+  }
+  return resolvedImages;
+}
+
+const resolvedImages = await resolveImages();
+---
+
+<main class='main-wrapper'>
+  <section class='section-news'>
+    <div class='padding-global padding-section-medium cc-news'>
+      <div class='w-layout-blockcontainer container w-container'>
+        <div class='news-wrapper'>
+          <div class='news-hero-block'>
+            <h1 class='blog-heading'>News &amp; Articles</h1>
+            <p class='text-size-small cc-max'>
+              Industry news, updates and insights that help behavioral
+              healthcare practitioners deliver the best patient care possible.
+            </p>
+          </div>
+          <div class='w-dyn-list'>
+            {
+              items.map((item) => {
+                const slug = item.fieldData.slug;
+                const imagesForSlug = resolvedImages[slug];
+                const mainImage = imagesForSlug ? imagesForSlug.main : null;
+
+                return (
+                  <div role='list' class='w-dyn-items'>
+                    <div role='listitem' class='collection-item-2 w-dyn-item'>
+                      <a
+                        href={`/news/${slug}`}
+                        class='news-img-block w-inline-block'
+                      >
+                        <img
+                          alt={
+                            item.fieldData['main-image'].alt ||
+                            'Navix News Image'
+                          }
+                          loading='lazy'
+                          src={
+                            mainImage
+                              ? mainImage.src
+                              : item.fieldData['main-image'].url
+                          }
+                        />
+                      </a>
+                      <div class='news-wrap'>
+                        <div class='news-date'>
+                          {new Date(item.fieldData.date).toLocaleDateString()}
+                        </div>
+                        <div class='news-head-block'>
+                          <a
+                            href={`/news/${item.fieldData.slug}`}
+                            class='news-head-link w-inline-block'
+                          >
+                            <h2 class='news-head'>{item.fieldData.name}</h2>
+                          </a>
+                          <div
+                            class='news-content w-richtext'
+                            set:html={item.fieldData['main-content-2']}
+                          />
+                        </div>
+                      </div>
+                      <a
+                        href={`/news/${item.fieldData.slug}`}
+                        class='arrow-block w-inline-block'
+                      >
+                        <div class='arrow w-embed'>
+                          <svg
+                            xmlns='http://www.w3.org/2000/svg'
+                            width='32'
+                            height='32'
+                            viewBox='0 0 32 32'
+                            fill='none'
+                          >
+                            <path
+                              d='M8 25.3343L25.3333 8.00098M25.3333 8.00098V24.641M25.3333 8.00098H8.69333'
+                              stroke='#374651'
+                              stroke-width='2'
+                              stroke-linecap='square'
+                            />
+                          </svg>
+                        </div>
+                      </a>
+                    </div>
+                  </div>
+                );
+              })
+            }
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>

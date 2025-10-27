@@ -1,0 +1,332 @@
+---
+import { Image } from 'astro:assets';
+import navixLogoImg from '../../assets/images/navix-health.png';
+import appStoreImg from '../../assets/images/64774c0cbbeba4b12ef4ea1c_apple-store.png';
+import facebookImg from '../../assets/images/facebook-1.png';
+import instagramImg from '../../assets/images/Instagram.png';
+import youtubeImg from '../../assets/images/Youtube.png';
+import googleImg from '../../assets/images/Google.png';
+import linkedInImg from '../../assets/images/LimkedIn.png';
+---
+
+<section class='footer-light'>
+  <div class='container'>
+    <div class='footer-wrapper-two'>
+      <a
+        href='/'
+        aria-current='page'
+        class='footer-brand w-inline-block w--current'
+      >
+        <Image
+          src={navixLogoImg}
+          style='width: 340px; height: auto;'
+          loading='lazy'
+          alt='Navix Logo'
+        />
+      </a>
+      <div class='footer-form w-form'>
+        <form
+          id='wf-form-Footer-Form'
+          name='wf-form-Footer-Form'
+          action='https://formspree.io/f/xbjnoldn'
+          method='POST'
+          class='footer-form-container'
+        >
+          <div class='footer-title cc-mail'>
+            Get latest product updates &amp; industry insights
+          </div>
+          <div class='footer-form-block'>
+            <input
+              class='footer-form-field w-input'
+              maxlength='256'
+              name='email'
+              aria-label='Get product updates'
+              placeholder='Enter your email'
+              type='email'
+              id='Footer-Email-2'
+              required=''
+            />
+            <input
+              type='submit'
+              data-wait='Please wait...'
+              class='button cc-signup w-button'
+              value='Sign up'
+            />
+          </div>
+        </form>
+        <div class='w-form-done'>
+          <div>Thank you! Your submission has been received!</div>
+        </div>
+        <div class='w-form-fail'>
+          <div>Oops! Something went wrong while submitting the form.</div>
+        </div>
+      </div>
+    </div>
+    <div class='footer-social-block'>
+      <div class='footer-title'>Download Navix App</div>
+    </div>
+    <div class='footer-social-block'>
+      <div class='footer-social-wrapper'>
+        <a
+          href='https://apps.apple.com/us/app/navix-health/id6446609141'
+          target='_blank'
+          class='social-link app-store w-inline-block'
+        >
+          <Image
+            src={appStoreImg}
+            loading='lazy'
+            width='140'
+            alt='Apple App Store Image'
+            class='social-image'
+          />
+        </a>
+      </div>
+      <div class='footer-social-wrapper hide-mobile-portrait'>
+        <a
+          href='https://www.facebook.com/profile.php?id=100087116288237&mibextid=LQQJ4d'
+          target='_blank'
+          class='social-link w-inline-block'
+        >
+          <Image
+            src={facebookImg}
+            loading='lazy'
+            width='30'
+            alt='Facebook Logo'
+            class='social-image'
+          />
+        </a>
+        <a
+          href='https://instagram.com/navixhealth?igshid=YmMyMTA2M2Y='
+          target='_blank'
+          class='social-link w-inline-block'
+        >
+          <Image
+            src={instagramImg}
+            loading='lazy'
+            width='30'
+            alt='Instagram Logo'
+            class='social-image'
+          />
+        </a>
+        <a
+          href='https://youtube.com/@navixhealth6082'
+          target='_blank'
+          class='social-link w-inline-block'
+        >
+          <Image
+            src={youtubeImg}
+            loading='lazy'
+            width='30'
+            alt='YouTube Logo'
+            class='social-image'
+          />
+        </a>
+        <a
+          href='https://maps.app.goo.gl/WHwcTiMietRb6wDZ7?g_st=ic'
+          target='_blank'
+          class='social-link w-inline-block'
+        >
+          <Image
+            src={googleImg}
+            loading='lazy'
+            width='30'
+            alt='Google Logo'
+            class='social-image'
+          />
+        </a>
+        <a
+          href='https://www.linkedin.com/company/navixhealth/'
+          target='_blank'
+          class='social-link w-inline-block'
+        >
+          <Image
+            src={linkedInImg}
+            loading='lazy'
+            width='30'
+            alt='LinkedIn Logo'
+            class='social-image'
+          />
+        </a>
+      </div>
+    </div>
+    <div class='footer-social-block mobile'>
+      <div class='footer-social-wrapper'>
+        <a
+          href='https://www.facebook.com/profile.php?id=100087116288237&mibextid=LQQJ4d'
+          target='_blank'
+          class='social-link w-inline-block'
+        >
+          <Image
+            src={facebookImg}
+            loading='lazy'
+            width='30'
+            alt='Facebook Logo'
+            class='social-image'
+          />
+        </a>
+        <a
+          href='https://instagram.com/navixhealth?igshid=YmMyMTA2M2Y='
+          target='_blank'
+          class='social-link w-inline-block'
+        >
+          <Image
+            src={instagramImg}
+            loading='lazy'
+            width='30'
+            alt='Instagram Logo'
+            class='social-image'
+          />
+        </a>
+        <a
+          href='https://youtube.com/@navixhealth6082'
+          target='_blank'
+          class='social-link w-inline-block'
+        >
+          <Image
+            src={youtubeImg}
+            loading='lazy'
+            width='30'
+            alt='YouTube Logo'
+            class='social-image'
+          />
+        </a>
+        <a
+          href='https://maps.app.goo.gl/WHwcTiMietRb6wDZ7?g_st=ic'
+          target='_blank'
+          class='social-link w-inline-block'
+        >
+          <Image
+            src={googleImg}
+            loading='lazy'
+            width='30'
+            alt='Google Logo'
+            class='social-image'
+          />
+        </a>
+        <a
+          href='https://www.linkedin.com/company/navixhealth/'
+          target='_blank'
+          class='social-link w-inline-block'
+        >
+          <Image
+            src={linkedInImg}
+            loading='lazy'
+            width='30'
+            alt='LinkedIn Logo'
+            class='social-image'
+          />
+        </a>
+      </div>
+    </div>
+    <div class='footer-divider-two'></div>
+    <div class='footer-link-wrap'>
+      <div class='footer-block-two'>
+        <div class='footer-title'>Product</div>
+        <a href='/facilities' class='footer-link-two'>Facilities Edition</a>
+        <a href='/professional' class='footer-link-two'>Professional Edition</a>
+        <a href='/navix-ai' class='footer-link-two'>Navix AI<sup>TM</sup></a>
+        <a href='/pricing' class='footer-link-two'>Pricing &amp; Planning</a>
+      </div>
+      <div class='footer-block-two'>
+        <div class='footer-title'>Resources</div>
+        <a href='/' class='footer-link-two'>Case Studies</a>
+        <a href='/faqs' class='footer-link-two'>FAQs</a>
+        <a href='/blogs' class='footer-link-two'>Blogs</a>
+        <a href='/news' class='footer-link-two'>News</a>
+      </div>
+      <div
+        id='w-node-_2032913b-10ee-0760-1e27-ef710d5b751e-0d5b74f4'
+        class='footer-block-two'
+      >
+        <div class='footer-title'>Support</div>
+        <a
+          href='https://calendly.com/d/yk9-xfc-stg/navix-demo?month=2024-01'
+          target='_blank'
+          class='footer-link-two'>Request a demo</a
+        >
+        <a href='/start-free-trial' class='footer-link-two'>Start Free Trial</a>
+        <a href='/' class='footer-link-two'>Help Center</a>
+        <a href='/' class='footer-link-two'>Customer Success</a>
+      </div>
+      <div class='footer-block-two'>
+        <div class='footer-title'>Contact</div>
+        <a
+          href='https://calendly.com/d/yk9-xfc-stg/navix-demo?month=2024-01'
+          target='_blank'
+          class='footer-link-two'>Request a demo</a
+        >
+        <a href='/start-free-trial' class='footer-link-two'>Start Free Trial</a>
+        <a href='/' class='footer-link-two'>Help Center</a>
+        <a href='/' class='footer-link-two'>Customer Success</a>
+      </div>
+      <div class='footer-block-two'>
+        <div class='footer-title'>Company</div>
+        <a href='/about-us' class='footer-link-two'>About Us</a>
+        <a href='/' class='footer-link-two'>Careers</a>
+        <a href='/contact' class='footer-link-two'>Contact Us</a>
+      </div>
+    </div>
+    <div class='footer-divider-two'></div>
+    <div class='footer-social-block-two mobile'>
+      <a href='/terms-of-use' class='footer-link-two pr-20'>Terms of Use</a>
+      <a href='/privacy-policy' class='footer-link-two'>Privacy Policy</a>
+    </div>
+    <div class='footer-bottom'>
+      <div class='footer-copyright w-embed w-script'>
+        ©
+        <script is:inline>
+          document.write(new Date().getFullYear());
+        </script> Navix Health
+      </div>
+      <div class='footer-copyright cc-hide w-embed w-script'>
+        © Navix Health. All rights reserved
+        <script is:inline>
+          document.write(new Date().getFullYear());
+        </script>
+      </div>
+      <div class='footer-social-block-two'>
+        <a href='/terms-of-use' class='footer-link-two'>Terms of Use</a>
+        <a href='/privacy-policy' class='footer-link-two'>Privacy Policy</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script is:inline>
+  document.addEventListener('DOMContentLoaded', function () {
+    var footerForm = document.getElementById('wf-form-Footer-Form');
+
+    footerForm.addEventListener('submit', function (event) {
+      event.preventDefault();
+
+      var formData = new FormData(footerForm);
+
+      fetch(footerForm.action, {
+        method: 'POST',
+        body: formData,
+        headers: {
+          Accept: 'application/json',
+        },
+      })
+        .then((response) => {
+          if (response.ok) {
+            footerForm.reset();
+            document.querySelector('.w-form-done').style.display = 'block';
+            document.querySelector('.w-form-fail').style.display = 'none';
+          } else {
+            return response.json().then((data) => {
+              if (data.errors) {
+                console.log('Validation errors:', data.errors);
+              }
+              throw new Error('Form submission error');
+            });
+          }
+        })
+        .catch((error) => {
+          console.error('Error:', error);
+          document.querySelector('.w-form-done').style.display = 'none';
+          document.querySelector('.w-form-fail').style.display = 'block';
+        });
+    });
+  });
+</script>
