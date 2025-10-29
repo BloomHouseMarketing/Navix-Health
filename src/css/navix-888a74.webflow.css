@@ -2555,6 +2555,19 @@ figcaption {
   text-decoration: none;
 }
 
+.footer-bottom-links {
+  color: #374651;
+  letter-spacing: -0.28px;
+  font-size: 0.875rem;
+  line-height: 1.7;
+  text-decoration: none;
+}
+
+.bloomhouseLogo {
+  display: inline-block;
+  width: 200px;
+}
+
 .footer-form {
   margin-bottom: 0;
 }
@@ -8649,7 +8662,7 @@ figcaption {
   }
 
   .footer-copyright {
-    display: none;
+    display: block !important;
   }
 
   .footer-copyright.cc-hide {
