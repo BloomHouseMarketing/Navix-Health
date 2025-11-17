@@ -12,7 +12,9 @@
         "date": "2024-01-19T00:00:00.000Z",
         "no": 7,
         "categories": "NEWS",
-        "name": "Navix Health Partners with SOBRsafe for Advanced Alcohol Monitoring in Digital Healthcare",
+        "name": "Advanced Alcohol Monitoring with Navix Health and SOBRsafe",
+        "title": "Advanced Alcohol Monitoring – Navix Health & SOBRsafe",
+        "description": "NAVIX Health collaborates with SOBRsafe for cutting-edge alcohol monitoring solutions in digital healthcare, enhancing safety and well-being.",
         "slug": "navix-health-partners-with-sobrsafe-for-advanced-alcohol-monitoring-in-digital-healthcare",
         "main-image": {
           "fileId": "65aa18ce772efe4731527aab",
@@ -39,7 +41,9 @@
       "fieldData": {
         "no": 2,
         "categories": "NEWS",
-        "name": "Unveiling NavixAi™",
+        "name": "NavixAi AI-Powered Behavioral Health Documentation Unveiled",
+        "title": "NavixAi™ - AI-Powered Behavioral Health Documentation",
+        "description": "Introducing NavixAI, a pioneering tool in precision diagnostics and healthcare insights by Navix Health.",
         "main-image": {
           "fileId": "656d7096a1dc8a36b1bc041e",
           "url": "https://uploads-ssl.webflow.com/6568551f105a7cc5b4f21739/656d7096a1dc8a36b1bc041e_Frame%201171276152%20(5).png",
@@ -65,7 +69,9 @@
       "isArchived": false,
       "isDraft": false,
       "fieldData": {
-        "name": "Navix Health's Innovative Approach Featured in MSN",
+        "name": "Innovative Approach in Behavioral Healthcare by Navix Health",
+        "title": "Our Innovative Solutions Transform Behavioral Healthcare",
+        "description": "Navix Health's pioneering methods spotlighted on MSN, highlighting advancements and unique strategies in the healthcare sector.",
         "categories": "NEWS",
         "main-image": {
           "fileId": "656d705ace8d99c57f35da7a",
@@ -93,7 +99,9 @@
       "isArchived": false,
       "isDraft": false,
       "fieldData": {
-        "name": "New York Weekly featured Navix Health: Advancing Behavioral Health Software.",
+        "name": "AI-Powered Innovations in Behavioral Health Software",
+        "title": "Navix Health – AI-Powered Behavioral Health Software",
+        "description": "New York Weekly highlights Navix Health's innovative approach to enhancing behavioral health software solutions.",
         "categories": "NEWS",
         "main-image": {
           "fileId": "656d706ce893034e137072a4",
@@ -121,7 +129,9 @@
       "isArchived": false,
       "isDraft": false,
       "fieldData": {
-        "name": "Disrupt Magazine Features Navix Health Inc.: The Future of Behavioral Health Facilities Lies in AI",
+        "name": "AI Transforms Behavioral Health Facilities at Navix Health",
+        "title": "Navix's AI Revolutionizes Behavioral Health Facilities",
+        "description": "Navix Health Inc. featured in Disrupt Magazine, showcasing the role of AI in revolutionizing the future of behavioral health facilities.",
         "categories": "NEWS",
         "slug": "disrupt-magazine-features-navix-health-inc-the-future-of-behavioral-health-facilities-lies-in-ai",
         "main-image": {

@@ -44,17 +44,19 @@ for (const path in images) {
     break;
   }
 }
+
+// Auto short description from content
+const shortDescription = content?.replace(/<[^>]+>/g, '').slice(0, 155) + '...';
 ---
 
 <Layout
-  title={`Navix's AI Revolutionizes Behavioral Health Facilities ${name}`}
-  description='Navix Health Inc. featured in Disrupt Magazine, showcasing the role of AI in revolutionizing the future of behavioral health facilities.'
-  canonical={`https://navixhealth.com/news/${Astro.props.slug}`}
+  title={`${name}`}
+  description={shortDescription}
+  canonical={`https://navixhealth.com/news/${slug}`}
   openGraph={{
-    url: `https://navixhealth.com/news/${Astro.props.slug}`,
-    title: `Navix's AI Revolutionizes Behavioral Health Facilities ${name}`,
-    description:
-      'Navix Health Inc. featured in Disrupt Magazine, showcasing the role of AI in revolutionizing the future of behavioral health facilities',
+    url: `https://navixhealth.com/news/${slug}`,
+    title: `${name}`,
+    description: shortDescription,
   }}
 >
   <main class='main-wrapper'>
