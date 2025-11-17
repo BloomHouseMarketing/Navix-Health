@@ -12,6 +12,8 @@ interface BlogPost {
   };
   'publish-date': string;
   'read-time': string;
+  'meta-title'?: string;
+  'meta-description'?: string;
 }
 
 export async function getStaticPaths() {
@@ -32,6 +34,8 @@ const {
   'main-img': mainImg,
   'publish-date': publishDate,
   'read-time': readTime,
+  'meta-title': metaTitle,
+  'meta-description': metaDescription,
 } = Astro.props as BlogPost;
 
 const images = import.meta.glob<{ default: ImageMetadata }>(
@@ -49,16 +53,16 @@ for (const path in images) {
 ---
 
 <Layout
-  title={`Navix Health | ${name}`}
-  description='Navix Health is a seamless software platform designed by and for behavioral health professionals.'
+  title={metaTitle}
+  description={metaDescription}
   canonical={`https://navixhealth.com/blogs/${Astro.props.slug}`}
   openGraph={{
     url: `https://navixhealth.com/blogs/${Astro.props.slug}`,
-    title: `Navix Health | ${name}`,
-    description:
-      'Navix Health is a seamless software platform designed by and for behavioral health professionals.',
+    title: metaTitle,
+    description: metaDescription,
   }}
 >
+
   <main class='main-wrapper'>
     <section class='section-inner-blog'>
       <div class='padding-global padding-section-medium cc-inner-blog'>
