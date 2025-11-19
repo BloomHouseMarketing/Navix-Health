@@ -1,18 +1,63 @@
 ---
-import Layout from '../../layouts/Layout.astro';
-import ResidentialTreatmentPage from '../../components/facilities/ResidentialTreatment.astro';
+import Layout from '../../layouts/Layout.astro'
+import ResidentialTreatmentPage from '../../components/facilities/ResidentialTreatment.astro'
 ---
 
 <Layout
-  title='Residential Treatment Centers – Integrated Platform for Enhanced Care'
-  description='Residential treatment centers provide structured environments for recovery, focusing on comprehensive care and support for individuals seeking mental health and addiction treatment.'
-  canonical='https://navixhealth.com/facilities/residential-treatment-centers'
+  title="Residential Treatment Centers – Integrated Platform for Enhanced Care"
+  description="Residential treatment centers provide structured environments for recovery, focusing on comprehensive care and support for individuals seeking mental health and addiction treatment."
+  canonical="https://navixhealth.com/facilities/residential-treatment-centers"
   openGraph={{
     url: 'https://navixhealth.com/facilities/residential-treatment-centers',
-    title: 'Residential Treatment Centers – Integrated Platform for Enhanced Care',
+    title:
+      'Residential Treatment Centers – Integrated Platform for Enhanced Care',
     description:
       'Residential treatment centers provide structured environments for recovery, focusing on comprehensive care and support for individuals seeking mental health and addiction treatment.',
   }}
 >
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "Navix Health",
+      "alternateName": "Navix Hub",
+      "applicationCategory": "Healthcare Software for Residential Treatment Centers",
+      "description": "Revolutionize care with our integrated platform for residential treatment centers. Enhance patient experiences and operational efficiency with Navix Health's tailored solutions.",
+      "url": "https://www.navixhealth.com/facilities/residential-treatment-centers",
+      "image": "https://www.navixhealth.com/_astro/Group-1000000891.lBFE7km5_cqOvR.webp",
+      "creator": {
+        "@type": "Organization",
+        "name": "Navix Health",
+        "url": "https://www.navixhealth.com"
+      },
+      "offers": {
+        "@type": "Offer",
+        "price": "Starting at $750/Month",
+        "priceCurrency": "USD",
+        "url": "https://www.navixhealth.com/pricing"
+      },
+      "featureList": [
+        "Client Onboarding",
+        "Client Discharge",
+        "Email Campaigns",
+        "Lead Management",
+        "Scheduling",
+        "Medication Management",
+        "Clinical Quality Management",
+        "Lab Management",
+        "Eligibility",
+        "Integrated Charge Capture",
+        "Utilization Reviews",
+        "Verification of Benefits",
+        "Payments Management",
+        "Analytics",
+        "Forms Management",
+        "Communications",
+        "Resource Libraries",
+        "Client Portal"
+      ]
+    }
+  </script>
+
   <ResidentialTreatmentPage />
 </Layout>

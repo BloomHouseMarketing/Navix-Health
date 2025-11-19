@@ -2,6 +2,19 @@
 import data from '../../../navixNews.json';
 import Layout from '../../layouts/Layout.astro';
 
+interface NewsPost {
+  slug: string;
+  name: string;
+  content: string;
+  'inner-img': {
+    url: string;
+    alt?: string;
+  };
+  date: string;
+  'title'?: string;
+  'description'?: string;
+}
+
 export async function getStaticPaths() {
   const items: { fieldData: NewsPost }[] = data.items;
 
@@ -13,30 +26,22 @@ export async function getStaticPaths() {
   return paths;
 }
 
-interface NewsPost {
-  slug: string;
-  name: string;
-  content: string;
-  'inner-img': {
-    url: string;
-    alt?: string;
-  };
-  date: string;
-}
-
 const {
   slug,
   name,
   content,
   'inner-img': innerImg,
   date,
+  'title': metaTitle,
+  'description': metaDescription,
 } = Astro.props as NewsPost;
 
+// Dynamic image import
 const images = import.meta.glob<{ default: ImageMetadata }>(
   '/src/assets/images/newsImages/*.{jpeg,jpg,png,gif,webp}'
 );
 
-let image = null;
+let image: ImageMetadata | null = null;
 
 for (const path in images) {
   if (path.includes(`${slug}-inner`)) {
@@ -44,94 +49,96 @@ for (const path in images) {
     break;
   }
 }
-
-// Auto short description from content
-const shortDescription = content?.replace(/<[^>]+>/g, '').slice(0, 155) + '...';
 ---
 
 <Layout
-  title={`${name}`}
-  description={shortDescription}
+  name={name}
+  title={metaTitle}
+  description={metaDescription}
   canonical={`https://navixhealth.com/news/${slug}`}
   openGraph={{
     url: `https://navixhealth.com/news/${slug}`,
-    title: `${name}`,
-    description: shortDescription,
+    name: name,
+    title: metaTitle,
+    description: metaDescription,
   }}
 >
-  <main class='main-wrapper'>
-    <section class='section-innew-news'>
-      <div class='padding-global padding-section-medium cc-inner-news'>
-        <div class='w-layout-blockcontainer container w-container'>
-          <div class='news-content-wrapper'>
-            <div class='innner-news-date'>
+  <main class="main-wrapper">
+    <section class="section-innew-news">
+      <div class="padding-global padding-section-medium cc-inner-news">
+        <div class="w-layout-blockcontainer container w-container">
+          <div class="news-content-wrapper">
+            <div class="innner-news-date">
               {new Date(date).toLocaleDateString()}
             </div>
-            <h1 class='news-inner-head'>{name}</h1>
+            <h1 class="news-inner-head">{name}</h1>
             <img
-              loading='lazy'
+              loading="lazy"
               src={image ? image.src : innerImg.url}
               alt={innerImg.alt || 'News Article Image'}
             />
-            <div class='new-inner-content w-richtext' set:html={content} />
+            <div class="new-inner-content w-richtext" set:html={content} />
           </div>
-          <div class='divider-blog cc-news'></div>
-          <div class='related-blog-wrapper'>
-            <div class='related-blog-wrap'>
-              <h2 class='related-head'>Related</h2>
-              <h2 class='related-head cc-fontsize'>News</h2>
-              <a href='/news' class='blog-link w-inline-block'>
-                <div class='blog-text'>View all</div>
-                <div class='html-embed-27 w-embed'>
+          <div class="divider-blog cc-news"></div>
+          <div class="related-blog-wrapper">
+            <div class="related-blog-wrap">
+              <h2 class="related-head">Related</h2>
+              <h2 class="related-head cc-fontsize">News</h2>
+              <a href="/news" class="blog-link w-inline-block">
+                <div class="blog-text">View all</div>
+                <div class="html-embed-27 w-embed">
                   <svg
-                    xmlns='http://www.w3.org/2000/svg'
-                    width='16'
-                    height='16'
-                    viewBox='0 0 16 16'
-                    fill='none'
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="16"
+                    viewBox="0 0 16 16"
+                    fill="none"
                   >
-                    <g clip-path='url(#clip0_768_2830)'>
+                    <g clip-path="url(#clip0_768_2830)">
                       <path
-                        d='M4 12L12 4'
-                        stroke='#374651'
-                        stroke-width='1.5'
-                        stroke-linecap='round'
-                        stroke-linejoin='round'></path>
+                        d="M4 12L12 4"
+                        stroke="#374651"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      ></path>
                       <path
-                        d='M5.5 4H12V10.5'
-                        stroke='#374651'
-                        stroke-width='1.5'
-                        stroke-linecap='round'
-                        stroke-linejoin='round'></path>
+                        d="M5.5 4H12V10.5"
+                        stroke="#374651"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      ></path>
                     </g>
                     <defs>
-                      <clippath id='clip0_768_2830'>
+                      <clipPath id="clip0_768_2830">
                         <rect
-                          width='16'
-                          height='16'
-                          fill='white'
-                          transform='matrix(1 0 0 -1 0 16)'></rect>
-                      </clippath>
+                          width="16"
+                          height="16"
+                          fill="white"
+                          transform="matrix(1 0 0 -1 0 16)"
+                        ></rect>
+                      </clipPath>
                     </defs>
                   </svg>
                 </div>
               </a>
             </div>
-            <div class='collection-list-wrapper w-dyn-list'>
-              <div role='list' class='collection-list-2 w-dyn-items'>
-                <div role='listitem' class='collection-item w-dyn-item'>
-                  <a href='#' class='w-inline-block'
-                    ><img alt='' loading='lazy' src='' class='img' /></a
-                  >
-                  <div class='related-blog-content'>
-                    <div class='inner-blog-text'></div>
-                    <a href='#' class='blog-head-link w-inline-block'>
-                      <div class='inner-blog-heading cc-size'></div>
+            <div class="collection-list-wrapper w-dyn-list">
+              <div role="list" class="collection-list-2 w-dyn-items">
+                <div role="listitem" class="collection-item w-dyn-item">
+                  <a href="#" class="w-inline-block">
+                    <img alt="" loading="lazy" src="" class="img" />
+                  </a>
+                  <div class="related-blog-content">
+                    <div class="inner-blog-text"></div>
+                    <a href="#" class="blog-head-link w-inline-block">
+                      <div class="inner-blog-heading cc-size"></div>
                     </a>
                   </div>
                 </div>
               </div>
-              <div class='w-dyn-empty'>
+              <div class="w-dyn-empty">
                 <div>No items found.</div>
               </div>
             </div>

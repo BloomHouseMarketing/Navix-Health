@@ -1,12 +1,12 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import SalesPricingPage from '../components/SalesPricing.astro';
+import Layout from '../layouts/Layout.astro'
+import SalesPricingPage from '../components/SalesPricing.astro'
 ---
 
 <Layout
-  title='Sales Pricing - Comprehensive Guide to Pricing Strategies'
-  description='Efficiently manage pricing strategies with insights on dynamic pricing models, competitive analysis, and data-driven decision-making for optimized sales performance.'
-  canonical='https://navixhealth.com/sales-pricing'
+  title="Sales Pricing - Comprehensive Guide to Pricing Strategies"
+  description="Efficiently manage pricing strategies with insights on dynamic pricing models, competitive analysis, and data-driven decision-making for optimized sales performance."
+  canonical="https://navixhealth.com/sales-pricing"
   openGraph={{
     url: 'https://navixhealth.com/sales-pricing',
     title: 'Sales Pricing - Comprehensive Guide to Pricing Strategies',
@@ -14,5 +14,28 @@ import SalesPricingPage from '../components/SalesPricing.astro';
       'Efficiently manage pricing strategies with insights on dynamic pricing models, competitive analysis, and data-driven decision-making for optimized sales performance.',
   }}
 >
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "Navix AI",
+      "alternateName": "NavixScribe",
+      "applicationCategory": "AI Powered Healthcare Software",
+      "description": "NavixScribe is a HIPAA-compliant, AI-powered tool that transcribes your session or audio file and writes a formatted note. NavixScribe Groups is now available to transcribe the group session and write formatted notes for each participant. The future of behavioral health technology is here with NAVIX.",
+      "url": "https://www.navixhealth.com/navixscribe",
+      "creator": {
+        "@type": "Organization",
+        "name": "Navix Health",
+        "url": "https://www.navixhealth.com"
+      },
+      "featureList": [
+        "Automation for Efficiency",
+        "Accuracy and Reliability",
+        "Integration with Familiar Platforms",
+        "Various Note Formats"
+      ]
+    }
+  </script>
+
   <SalesPricingPage />
 </Layout>

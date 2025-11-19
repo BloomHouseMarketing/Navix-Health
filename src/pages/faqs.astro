@@ -13,5 +13,73 @@ import FaqsPage from '../components/Faqs.astro';
     description: "Get answers to common questions about NavixHealth's services, policies, and more to better understand our healthcare solutions and offerings.",
   }}
 >
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [{
+    "@type": "Question",
+    "name": "How do I demo your software?",
+    "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "You can schedule a demo by clicking on our Request a Demo link here."
+    }
+  },{
+    "@type": "Question",
+    "name": "How do you protect patient data?",
+    "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "First and foremost, we comply with all applicable laws and regulations, including the Health Insurance Portability and Accountability Act (HIPAA) Privacy Rule. This rule establishes national standards for protecting patient health information and requires us to maintain that information's confidentiality, integrity and availability.
+
+To ensure compliance with HIPAA, we have implemented a number of security measures, including:
+
+Encrypting patient data: All patient data is encrypted in transit using industry-standard encryption technologies. This ensures that patient data is protected even if it is intercepted by unauthorized individuals.
+
+Implementing access controls:We have implemented strict access controls to ensure that only authorized individuals can access patient data. This includes requiring employees to use unique login credentials and regularly monitoring and auditing access to patient data.
+
+Conducting security audits: We conduct security audits to identify and address potential vulnerabilities in our systems and processes.
+
+By implementing these and other security measures, we are confident that we are able to protect patient data and comply with HIPAA Privacy requirements. If you have any additional questions about our data protection practices, please don't hesitate to contact us."
+    }
+  },{
+    "@type": "Question",
+    "name": "What do you mean when you say you provide a seamless approach to behavioral health software?",
+    "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Rather than build freestanding components with integrations as an afterthought, we’ve built our software to operate as a fully unified platform that combines CRM, EMR and RCM services into one, providing highly adaptable and flexible features so practitioners can customize their software to best serve the unique needs of their behavioral health organizations and group practices. Recognizing the difficulty of operational changes, we’ve designed Navix Hub™ to be highly intuitive and easy to learn. Data is seamlessly transferable from existing operating systems, reducing the friction in adoption and implementation."
+    }
+  },{
+    "@type": "Question",
+    "name": "How do you make onboarding to your software less painful than other platforms?",
+    "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Our onboarding process is stream in lined through internal software. Once you purchase the software through our website, you will be prompted to fill out the onboarding forms via the website or when you first log into your software. Once these forms are complete, your implementation specialist will be in contact within 24-hours to begin building out your software. This process can take anywhere from 1-day to 2-weeks depending on the implementation package you choose at checkout."
+    }
+  },{
+    "@type": "Question",
+    "name": "Does your platform integrate with other software tools?",
+    "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Our platform is integrated with Google Analytics, Zoom, Change Healthcare and Docusign and is compatible with several other software tools. These integrations allow for customizable reports, fully-encrypted telehealth services, fast and accurate verification of benefits and a simple way to collect, track and aggregate patient data for ongoing performance improvement."
+    }
+  },{
+    "@type": "Question",
+    "name": "What experience and education do you have?",
+    "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Our team has over 50 years combined experience working in the behavioral healthcare industry in positions such as CEO, Chief Operations Officer, Executive Director, Clinical Director, Chief Compliance Officer, Director of Utilization Management and Admissions. Our diverse educational backgrounds also span multiple industries, including Business Administration, Chemical Engineering, Accounting, Law, Communications, Counseling and Social Work."
+    }
+  },{
+    "@type": "Question",
+    "name": "Why do I need your software?",
+    "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "You have many options when it comes to software. Navix Hub™ aims to eliminate the pain points often experienced with other platforms by providing a seamless approach to behavior health software so professionals can devote less time and energy to patient onboarding and management, clinical documentation, claims management and billing and instead focus their resources on what matters most: the patient. Navix Hub™ software reduces operational costs and relieves the time and energy of staff, helping optimize and improve both business and clinical outcomes."
+    }
+  }]
+}
+</script>
+
   <FaqsPage />
 </Layout>

@@ -14,5 +14,62 @@ import LandingPage from '../components/LandingPage.astro';
       'Healthcare solutions provider offering comprehensive services, including diagnostics and patient management, to enhance medical efficiency and patient care.',
   }}
 >
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "Navix Health",
+  "url": "http://www.navixhealth.com/",
+  "logo": "https://www.navixhealth.com/_astro/navix-health.Ff3yiAGS_Z29hLs0.webp",
+  "sameAs": [
+    "https://www.facebook.com/profile.php?id=100087116288237&mibextid=LQQJ4d",
+    "https://instagram.com/navixhealth?igshid=YmMyMTA2M2Y=",
+    "https://youtube.com/@navixhealth6082",
+    "https://www.linkedin.com/company/navixhealth/"
+  ]
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [{
+    "@type": "Question",
+    "name": "How do I demo your software?",
+    "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "You can schedule a demo by clicking on our Request a Demo link here."
+    }
+  },{
+    "@type": "Question",
+    "name": "What do you mean when you say you provide a seamless approach to behavioral health software?",
+    "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Rather than build freestanding components with integrations as an afterthought, we’ve built our software to operate as a fully unified platform that combines CRM, EMR and RCM services into one, providing highly adaptable and flexible features so practitioners can customize their software to best serve the unique needs of their behavioral health organizations and group practices. Recognizing the difficulty of operational changes, we’ve designed Navix Hub™ to be highly intuitive and easy to learn. Data is seamlessly transferable from existing operating systems, reducing the friction in adoption and implementation."
+    }
+  },{
+    "@type": "Question",
+    "name": "Does your platform integrate with other software tools?",
+    "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Our platform is integrated with Google Analytics, Zoom, Change Healthcare and Docusign and is compatible with several other software tools. These integrations allow for customizable reports, fully-encrypted telehealth services, fast and accurate verification of benefits and a simple way to collect, track and aggregate patient data for ongoing performance improvement."
+    }
+  },{
+    "@type": "Question",
+    "name": "How do you make onboarding to your software less painful than other platforms?",
+    "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Navix Health comes pre-loaded with every form of documentation needed to run a facility or a private practice. The process for behavioral health facilities starts with identifying a super admin at your facility who is knowledgable of your work flow, we work through customizing the Navix software to meet your needs. Step two we train the staff and step three we go-live. Throughout the process we are available through a dedicated slack channel for questions and support. Navix also provides \"office hours\" after launch to answer staff questions and work through workflow challenges.
+
+For our private practice users, we recommend setting up a zoom after you sign up for our software. The support team will help you dial in the software to meet your practice needs.
+
+NavixAI is a turnkey software, however, we recommend meeting with the support team prior to using to help you get acquainted with the various AI tools."
+    }
+  }]
+}
+</script>
+
   <LandingPage />
 </Layout>

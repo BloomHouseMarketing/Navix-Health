@@ -13,5 +13,133 @@ import PricingPage from '../components/Pricing.astro';
     description:"Transparent pricing for Navix Health's services, tailored to your needs. Access detailed cost breakdowns to make informed healthcare decisions.",
   }}
 >
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "Navix Health",
+  "alternateName": "Navix Hub",
+  "applicationCategory": "Healthcare Software",
+  "url": "https://www.navixhealth.com/pricing",
+  "image": "https://www.navixhealth.com/_astro/Group-1000000891.lBFE7km5_cqOvR.webp",
+  "creator": {
+    "@type": "Organization",
+    "name": "Navix Health",
+    "url": "https://www.navixhealth.com"
+  },
+  "offers": [
+  {
+    "@type": "Offer",
+    "name": "Professional Edition - 14 Day Trial",
+    "price": "$0",
+    "priceCurrency": "USD",
+    "url": "https://www.navixhealth.com/pricing"
+  },
+  {
+    "@type": "Offer",
+    "name": "Professional Edition",
+    "price": "$45.99/Month",
+    "priceCurrency": "USD",
+    "url": "https://www.navixhealth.com/pricing"
+  },
+  {
+    "@type": "Offer",
+    "name": "Facilities Edition",
+    "price": "$750/Month",
+    "priceCurrency": "USD",
+    "url": "https://www.navixhealth.com/pricing"
+  },
+  {
+    "@type": "Offer",
+    "name": "NavixAI - Free Trial",
+    "price": "$0",
+    "priceCurrency": "USD",
+    "url": "https://www.navixhealth.com/pricing"
+  },
+  {
+    "@type": "Offer",
+    "name": "NavixAI - Entry",
+    "price": "$14.99/Month",
+    "priceCurrency": "USD",
+    "url": "https://www.navixhealth.com/pricing"
+  },
+  {
+    "@type": "Offer",
+    "name": "NavixAI - Professional",
+    "price": "$58.99/Month",
+    "priceCurrency": "USD",
+    "url": "https://www.navixhealth.com/pricing"
+  }
+],
+  "featureList": [
+    "Client Onboarding",
+    "Client Discharge",
+    "Email Campaigns",
+    "Lead Management",
+    "Scheduling",
+    "Medication Management",
+    "Clinical Quality Management",
+    "Lab Management",
+    "Eligibility",
+    "Integrated Charge Capture",
+    "Utilization Reviews",
+    "Verification of Benefits",
+    "Payments Management",
+    "Analytics",
+    "Forms Management",
+    "Communications",
+    "Resource Libraries",
+    "Client Portal"
+  ]
+}
+</script>
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [{
+    "@type": "Question",
+    "name": "How do I download the Navix app?",
+    "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "To download the Navix Health IOS app you must already have an account. The app is not searchable on the app store. When the account is set up, click this LINK"
+    }
+  },{
+    "@type": "Question",
+    "name": "What features are included in the Navix app?",
+    "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Features currently available include the CRM and calendar sections of the Navix Health software. It also includes the facesheet from the EMR of each client for easy reference. The next version of the app will include the ability to do documentation from your phone or tablet."
+    }
+  },{
+    "@type": "Question",
+    "name": "Is my information secure and private?",
+    "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "We are HIPAA compliant and SOC2 certified."
+    }
+  },{
+    "@type": "Question",
+    "name": "How can I set up personalized notifications?",
+    "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Notifications are currently defaulted to certain features within the software and these notifications will be in the notification center as well as by email."
+    }
+  },{
+    "@type": "Question",
+    "name": "What support is available if I encounter issues?",
+    "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "If you are a professional or NavixAI user you can email support@navixhealth.com or call 855-490-1982. Calls will be answered between 9 am PST - 5 pm PST.
+
+If you are Navix facility user you should have access to your company customer support channel or use the above methods."
+    }
+  }]
+}
+</script>
+
   <PricingPage />
 </Layout>

@@ -1,12 +1,12 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import PrivacyPolicyPage from '../components/PrivacyPolicy.astro';
+import Layout from '../layouts/Layout.astro'
+import PrivacyPolicyPage from '../components/PrivacyPolicy.astro'
 ---
 
 <Layout
-  title='Navix Health | Privacy Policy'
-  description='Navix Health is a seamless software platform designed by and for behavioral health professionals.'
-  canonical='https://navixhealth.com/privacy-policy'
+  title="Navix Health | Privacy Policy"
+  description="Navix Health is a seamless software platform designed by and for behavioral health professionals."
+  canonical="https://navixhealth.com/privacy-policy"
   openGraph={{
     url: 'https://navixhealth.com/privacy-policy',
     title: 'Navix Health | Privacy Policy',
@@ -14,5 +14,28 @@ import PrivacyPolicyPage from '../components/PrivacyPolicy.astro';
       'Navix Health is a seamless software platform designed by and for behavioral health professionals.',
   }}
 >
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "Navix AI",
+      "alternateName": "NavixScribe",
+      "applicationCategory": "AI Powered Healthcare Software",
+      "description": "NavixScribe is a HIPAA-compliant, AI-powered tool that transcribes your session or audio file and writes a formatted note. NavixScribe Groups is now available to transcribe the group session and write formatted notes for each participant. The future of behavioral health technology is here with NAVIX.",
+      "url": "https://www.navixhealth.com/navixscribe",
+      "creator": {
+        "@type": "Organization",
+        "name": "Navix Health",
+        "url": "https://www.navixhealth.com"
+      },
+      "featureList": [
+        "Automation for Efficiency",
+        "Accuracy and Reliability",
+        "Integration with Familiar Platforms",
+        "Various Note Formats"
+      ]
+    }
+  </script>
+
   <PrivacyPolicyPage />
 </Layout>

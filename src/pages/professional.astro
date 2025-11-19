@@ -1,12 +1,12 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import ProfessionalPage from '../components/Professional.astro';
+import Layout from '../layouts/Layout.astro'
+import ProfessionalPage from '../components/Professional.astro'
 ---
 
 <Layout
-  title='Navix Health - EMR and CRM Software for Private Practices'
-  description='Comprehensive health management solutions for professionals, including tailored services to enhance patient care and improve clinical outcomes.'
-  canonical='https://navixhealth.com/professional'
+  title="Navix Health - EMR and CRM Software for Private Practices"
+  description="Comprehensive health management solutions for professionals, including tailored services to enhance patient care and improve clinical outcomes."
+  canonical="https://navixhealth.com/professional"
   openGraph={{
     url: 'https://navixhealth.com/professional',
     title: 'Navix Health - EMR and CRM Software for Private Practices',
@@ -14,5 +14,39 @@ import ProfessionalPage from '../components/Professional.astro';
       'Comprehensive health management solutions for professionals, including tailored services to enhance patient care and improve clinical outcomes.',
   }}
 >
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "Navix Health",
+      "alternateName": "Navix Hub",
+      "applicationCategory": "Healthcare Software for Professionals",
+      "description": "Support your private practice and, therefore, your life. Navix Hub simplifies therapy practices with its EMR, CRM, and Email Suite. It offers a client portal and mobile app (Q2), AI note-taking, and telehealth (Q3). Designed for simplicity, a billing software is expected in Q4, allowing therapists to focus on client care.",
+      "url": "https://www.navixhealth.com/professional",
+      "image": "https://www.navixhealth.com/_astro/Screenshot-2024-01-18-at-4.47.23-PM.VDgy6K5H_Z7pQlJ.webp",
+      "creator": {
+        "@type": "Organization",
+        "name": "Navix Health",
+        "url": "https://www.navixhealth.com"
+      },
+      "offers": {
+        "@type": "Offer",
+        "price": "Starting at $45.99/Month",
+        "priceCurrency": "USD",
+        "url": "https://www.navixhealth.com/pricing"
+      },
+      "featureList": [
+        "Unlimited clients",
+        "CRM",
+        "EMR",
+        "Email marketing tool",
+        "Client portal",
+        "Unlimited templates",
+        "Customer support",
+        "Customizable notes and assessments"
+      ]
+    }
+  </script>
+
   <ProfessionalPage />
 </Layout>

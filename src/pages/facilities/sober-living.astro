@@ -1,12 +1,12 @@
 ---
-import Layout from '../../layouts/Layout.astro';
-import SoberLivingPage from '../../components/facilities/SoberLiving.astro';
+import Layout from '../../layouts/Layout.astro'
+import SoberLivingPage from '../../components/facilities/SoberLiving.astro'
 ---
 
 <Layout
-  title='Sober Living Management System – Simplify Administration'
-  description='Supportive sober living environments for recovery and wellness, promoting healthy lifestyles and long-term sobriety for individuals in need.'
-  canonical='https://navixhealth.com/facilities/sober-living'
+  title="Sober Living Management System – Simplify Administration"
+  description="Supportive sober living environments for recovery and wellness, promoting healthy lifestyles and long-term sobriety for individuals in need."
+  canonical="https://navixhealth.com/facilities/sober-living"
   openGraph={{
     url: 'https://navixhealth.com/facilities/sober-living',
     title: 'Sober Living Management System – Simplify Administration',
@@ -14,5 +14,49 @@ import SoberLivingPage from '../../components/facilities/SoberLiving.astro';
       'Supportive sober living environments for recovery and wellness, promoting healthy lifestyles and long-term sobriety for individuals in need.',
   }}
 >
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "Navix Health",
+      "alternateName": "Navix Hub",
+      "applicationCategory": "Healthcare Software for Sober Living Facilities",
+      "description": "Empower sober living environments with our all-encompassing management system. Simplify administration and focus on supporting residents' journey to recovery.",
+      "url": "https://www.navixhealth.com/facilities/sober-living",
+      "image": "https://www.navixhealth.com/_astro/Group-1000000891.lBFE7km5_cqOvR.webp",
+      "creator": {
+        "@type": "Organization",
+        "name": "Navix Health",
+        "url": "https://www.navixhealth.com"
+      },
+      "offers": {
+        "@type": "Offer",
+        "price": "Starting at $750/Month",
+        "priceCurrency": "USD",
+        "url": "https://www.navixhealth.com/pricing"
+      },
+      "featureList": [
+        "Client Onboarding",
+        "Client Discharge",
+        "Email Campaigns",
+        "Lead Management",
+        "Scheduling",
+        "Medication Management",
+        "Clinical Quality Management",
+        "Lab Management",
+        "Eligibility",
+        "Integrated Charge Capture",
+        "Utilization Reviews",
+        "Verification of Benefits",
+        "Payments Management",
+        "Analytics",
+        "Forms Management",
+        "Communications",
+        "Resource Libraries",
+        "Client Portal"
+      ]
+    }
+  </script>
+
   <SoberLivingPage />
 </Layout>

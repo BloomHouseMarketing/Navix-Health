@@ -1,12 +1,12 @@
 ---
-import Layout from '../../layouts/Layout.astro';
-import CaseManagementPage from '../../components/professionals/CaseManagement.astro';
+import Layout from '../../layouts/Layout.astro'
+import CaseManagementPage from '../../components/professionals/CaseManagement.astro'
 ---
 
 <Layout
-  title='Case Management Solutions – Navix Health'
-  description='Comprehensive case management resources and support for healthcare professionals to enhance patient care and streamline workflow.'
-  canonical='https://navixhealth.com/professionals/case-management'
+  title="Case Management Solutions – Navix Health"
+  description="Comprehensive case management resources and support for healthcare professionals to enhance patient care and streamline workflow."
+  canonical="https://navixhealth.com/professionals/case-management"
   openGraph={{
     url: 'https://navixhealth.com/professionals/case-management',
     title: 'Case Management Solutions – Navix Health',
@@ -14,5 +14,35 @@ import CaseManagementPage from '../../components/professionals/CaseManagement.as
       'Comprehensive case management resources and support for healthcare professionals to enhance patient care and streamline workflow.',
   }}
 >
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "Navix Health",
+      "alternateName": "Navix Hub",
+      "applicationCategory": "Healthcare Software for Case Management",
+      "description": "Navix Professional for case managers includes a CRM (customer relationship management) to maintain referral relationships with other practitioners and facilities, helping you grow your business. The EMR is an affordable way to organize and document your work with families giving you data insights and an efficient process. Navix RCM, a billing software, is coming in 2025 to streamline your entire business and client workflow.",
+      "url": "https://www.navixhealth.com/professionals/case-management",
+      "image": "https://www.navixhealth.com/_astro/Screenshot-2024-01-18-at-4.47.23-PM.VDgy6K5H_Z7pQlJ.webp",
+      "creator": {
+        "@type": "Organization",
+        "name": "Navix Health",
+        "url": "https://www.navixhealth.com"
+      },
+      "offers": {
+        "@type": "Offer",
+        "price": "Starting at $45.99/Month",
+        "priceCurrency": "USD",
+        "url": "https://www.navixhealth.com/pricing"
+      },
+      "featureList": [
+        "A combined CRM and EMR enables you to track referral relationships and document the work you do with families.",
+        "Offers advanced features like AI note-taking and telehealth, set to launch in upcoming quarters.",
+        "Provides a mobile app and client portal for enhanced accessibility and client engagement.",
+        "Navix RCM, the billing platform, arrives in 2025, completing the eco-system for your business."
+      ]
+    }
+  </script>
+
   <CaseManagementPage />
 </Layout>

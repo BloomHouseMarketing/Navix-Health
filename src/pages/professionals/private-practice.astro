@@ -1,12 +1,12 @@
 ---
-import Layout from '../../layouts/Layout.astro';
-import PrivatePracticePage from '../../components/professionals/PrivatePractice.astro';
+import Layout from '../../layouts/Layout.astro'
+import PrivatePracticePage from '../../components/professionals/PrivatePractice.astro'
 ---
 
 <Layout
-  title='Private Practice Management Software – Navix Health'
-  description='Support private practice professionals with innovative health solutions and resources for improved patient care and operational efficiency.'
-  canonical='https://navixhealth.com/professionals/private-practice'
+  title="Private Practice Management Software – Navix Health"
+  description="Support private practice professionals with innovative health solutions and resources for improved patient care and operational efficiency."
+  canonical="https://navixhealth.com/professionals/private-practice"
   openGraph={{
     url: 'https://navixhealth.com/professionals/private-practice',
     title: 'Private Practice Management Software – Navix Health',
@@ -14,5 +14,35 @@ import PrivatePracticePage from '../../components/professionals/PrivatePractice.
       'Support private practice professionals with innovative health solutions and resources for improved patient care and operational efficiency.',
   }}
 >
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "Navix Health",
+      "alternateName": "Navix Hub",
+      "applicationCategory": "Healthcare Software for Private Practice",
+      "description": "Navix Health software, powered by NavixAI, transforms how you manage your behavioral health practice. Spend less time on administrative tasks and more time creating positive patient experiences. Navix EMR for professionals includes a CRM (customer relationship management) for you to maintain referral relationships with other practitioners and service providers. The CRM is a useful tool to use to grow your business. Navix plans on offering a seamless RCM (billing software) in 2025 to streamline your entire private practice.",
+      "url": "https://www.navixhealth.com/professionals/private-practice",
+      "image": "https://www.navixhealth.com/_astro/Screenshot-2024-01-18-at-4.47.23-PM.VDgy6K5H_Z7pQlJ.webp",
+      "creator": {
+        "@type": "Organization",
+        "name": "Navix Health",
+        "url": "https://www.navixhealth.com"
+      },
+      "offers": {
+        "@type": "Offer",
+        "price": "Starting at $45.99/Month",
+        "priceCurrency": "USD",
+        "url": "https://www.navixhealth.com/pricing"
+      },
+      "featureList": [
+        "Streamlines administrative tasks with an integrated EMR and CRM system.",
+        "Offers advanced features like AI documentation tools, including NavixScribe which transcribes your one-on-one sessions and writes a formatted note.",
+        "Provides a mobile app and client portal for enhanced accessibility and client engagement.",
+        "A simplified billing process coming in 2025 to complete the private practice client work-flow. One software, all of your documentation and administrative needs met."
+      ]
+    }
+  </script>
+
   <PrivatePracticePage />
 </Layout>

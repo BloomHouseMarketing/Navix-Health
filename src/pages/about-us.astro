@@ -1,12 +1,12 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import AboutUsPage from '../components/AboutUs.astro';
+import Layout from '../layouts/Layout.astro'
+import AboutUsPage from '../components/AboutUs.astro'
 ---
 
 <Layout
-  title='Behavioral Health Software – About Navix Health'
-  description='Dedicated to improving healthcare with innovative solutions and a compassionate approach, NavixHealth is committed to transforming patient outcomes.'
-  canonical='https://navixhealth.com/about-us'
+  title="Behavioral Health Software – About Navix Health"
+  description="Dedicated to improving healthcare with innovative solutions and a compassionate approach, NavixHealth is committed to transforming patient outcomes."
+  canonical="https://navixhealth.com/about-us"
   openGraph={{
     url: 'https://navixhealth.com/about-us',
     title: 'Behavioral Health Software – About Navix Health',
@@ -14,5 +14,81 @@ import AboutUsPage from '../components/AboutUs.astro';
       'Dedicated to improving healthcare with innovative solutions and a compassionate approach, NavixHealth is committed to transforming patient outcomes.',
   }}
 >
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "Navix Health",
+      "url": "http://www.navixhealth.com/",
+      "logo": "https://www.navixhealth.com/_astro/navix-health.Ff3yiAGS_Z29hLs0.webp",
+      "sameAs": [
+        "https://www.facebook.com/profile.php?id=100087116288237&mibextid=LQQJ4d",
+        "https://instagram.com/navixhealth?igshid=YmMyMTA2M2Y=",
+        "https://youtube.com/@navixhealth6082",
+        "https://www.linkedin.com/company/navixhealth/"
+      ]
+    }
+  </script>
+
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org/",
+      "@type": "Person",
+      "name": "Jason Brumback",
+      "url": "https://www.navixhealth.com/",
+      "image": "https://www.navixhealth.com/images/Headshot-Jason_84_-removebg-preview-removebg-preview.png",
+      "jobTitle": "President & CEO",
+      "worksFor": {
+        "@type": "Organization",
+        "name": "Navix Health"
+      }
+    }
+  </script>
+
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org/",
+      "@type": "Person",
+      "name": "Colin Christie",
+      "url": "https://www.navixhealth.com/",
+      "image": "https://www.navixhealth.com/images/Headshot_-_Colin_Christie-removebg-preview.png",
+      "jobTitle": "Chairman & CTO",
+      "worksFor": {
+        "@type": "Organization",
+        "name": "Navix Health"
+      }
+    }
+  </script>
+
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org/",
+      "@type": "Person",
+      "name": "Megan Weaver",
+      "url": "https://www.navixhealth.com/",
+      "image": "https://www.navixhealth.com/images/Megan_Headshot_Lessened_Shadows--2-removebg-preview.png",
+      "jobTitle": "VP & Chief Product Officer",
+      "worksFor": {
+        "@type": "Organization",
+        "name": "Navix Health"
+      }
+    }
+  </script>
+
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org/",
+      "@type": "Person",
+      "name": "Kristen Smith",
+      "url": "https://www.navixhealth.com/",
+      "image": "https://www.navixhealth.com/images/_D858145-removebg-preview-1.png",
+      "jobTitle": "Chief Marketing Officer",
+      "worksFor": {
+        "@type": "Organization",
+        "name": "Navix Health"
+      }
+    }
+  </script>
+
   <AboutUsPage />
 </Layout>

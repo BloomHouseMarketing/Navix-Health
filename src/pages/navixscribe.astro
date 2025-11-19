@@ -1,17 +1,41 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import NavixScribePage from '../components/NavixScribe.astro';
+import Layout from '../layouts/Layout.astro'
+import NavixScribePage from '../components/NavixScribe.astro'
 ---
 
 <Layout
-  title='NavixScribe – AI-Powered Transcription & Note-Taking Tool'
+  title="NavixScribe – AI-Powered Transcription & Note-Taking Tool"
   description="Enhance clinical documentation efficiency and accuracy with NAVIX Health's advanced scribe services tailored for healthcare professionals."
-  canonical='https://navixhealth.com/navixscribe'
+  canonical="https://navixhealth.com/navixscribe"
   openGraph={{
     url: 'https://navixhealth.com/navixscribe',
     title: 'NavixScribe – AI-Powered Transcription & Note-Taking Tool',
-    description:"Enhance clinical documentation efficiency and accuracy with NAVIX Health's advanced scribe services tailored for healthcare professionals.",
+    description:
+      "Enhance clinical documentation efficiency and accuracy with NAVIX Health's advanced scribe services tailored for healthcare professionals.",
   }}
 >
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "Navix AI",
+      "alternateName": "NavixScribe",
+      "applicationCategory": "AI Powered Healthcare Software",
+      "description": "NavixScribe is a HIPAA-compliant, AI-powered tool that transcribes your session or audio file and writes a formatted note. NavixScribe Groups is now available to transcribe the group session and write formatted notes for each participant. The future of behavioral health technology is here with NAVIX.",
+      "url": "https://www.navixhealth.com/navixscribe",
+      "creator": {
+        "@type": "Organization",
+        "name": "Navix Health",
+        "url": "https://www.navixhealth.com"
+      },
+      "featureList": [
+        "Automation for Efficiency",
+        "Accuracy and Reliability",
+        "Integration with Familiar Platforms",
+        "Various Note Formats"
+      ]
+    }
+  </script>
+
   <NavixScribePage />
 </Layout>

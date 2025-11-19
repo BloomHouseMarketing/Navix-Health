@@ -1,12 +1,12 @@
 ---
-import Layout from '../../layouts/Layout.astro';
-import SmallGroupPracticePage from '../../components/professionals/SmallGroupPractice.astro';
+import Layout from '../../layouts/Layout.astro'
+import SmallGroupPracticePage from '../../components/professionals/SmallGroupPractice.astro'
 ---
 
 <Layout
-  title='Small Group Practice Management - Navix Health'
-  description='Supportive resources and solutions for small group practices to enhance healthcare delivery and operational efficiency.'
-  canonical='https://navixhealth.com/professionals/small-group-practice'
+  title="Small Group Practice Management - Navix Health"
+  description="Supportive resources and solutions for small group practices to enhance healthcare delivery and operational efficiency."
+  canonical="https://navixhealth.com/professionals/small-group-practice"
   openGraph={{
     url: 'https://navixhealth.com/professionals/small-group-practice',
     title: 'Small Group Practice Management - Navix Health',
@@ -14,5 +14,35 @@ import SmallGroupPracticePage from '../../components/professionals/SmallGroupPra
       'Supportive resources and solutions for small group practices to enhance healthcare delivery and operational efficiency.',
   }}
 >
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "Navix Health",
+      "alternateName": "Navix Hub",
+      "applicationCategory": "Healthcare Software for Small Group Practice",
+      "description": "Navix Health software, powered by NavixAI, transforms how you manage your behavioral health practice. Spend less time on administrative tasks and more time creating positive patient experiences. Navix EMR for professionals includes a CRM (customer relationship management) for you to maintain referral relationships with other practitioners and service providers. The CRM is a useful tool to use to grow your business. Navix plans on offering a seamless RCM (billing software) in 2025 to streamline your entire private practice. One of the challenges of a growing, multi-location group practice is outgrowing your legacy private practice software. Navix Health solves this problem with the ability to add multiple locations in one server. Streamlining the patient process, data and scheduling across multiple sites.",
+      "url": "https://www.navixhealth.com/professionals/small-group-practice",
+      "image": "https://www.navixhealth.com/_astro/Screenshot-2024-01-18-at-4.47.23-PM.VDgy6K5H_Z7pQlJ.webp",
+      "creator": {
+        "@type": "Organization",
+        "name": "Navix Health",
+        "url": "https://www.navixhealth.com"
+      },
+      "offers": {
+        "@type": "Offer",
+        "price": "Starting at $45.99/Month",
+        "priceCurrency": "USD",
+        "url": "https://www.navixhealth.com/pricing"
+      },
+      "featureList": [
+        "Streamlines administrative tasks with an integrated EMR and CRM system.",
+        "Offers advanced features like AI documentation tools, including NavixScribe which transcribes your one-on-one sessions and writes a formatted note.",
+        "Provides a mobile app and client portal for enhanced accessibility and client engagement.",
+        "A simplified billing process coming in 2025 to complete the private practice client work-flow. One software, all of your documentation and administrative needs met."
+      ]
+    }
+  </script>
+
   <SmallGroupPracticePage />
 </Layout>

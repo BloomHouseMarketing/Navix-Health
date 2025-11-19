@@ -1,12 +1,12 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import NavixAIPage from '../components/NavixAI.astro';
+import Layout from '../layouts/Layout.astro'
+import NavixAIPage from '../components/NavixAI.astro'
 ---
 
 <Layout
-  title='AI-Powered Documentation Tools for Behavioral Health'
-  description='AI-powered healthcare solutions for enhanced patient outcomes and streamlined clinical operations in the medical field.'
-  canonical='https://navixhealth.com/navix-ai'
+  title="AI-Powered Documentation Tools for Behavioral Health"
+  description="AI-powered healthcare solutions for enhanced patient outcomes and streamlined clinical operations in the medical field."
+  canonical="https://navixhealth.com/navix-ai"
   openGraph={{
     url: 'https://navixhealth.com/navix-ai',
     title: 'AI-Powered Documentation Tools for Behavioral Health',
@@ -14,5 +14,53 @@ import NavixAIPage from '../components/NavixAI.astro';
       'AI-powered healthcare solutions for enhanced patient outcomes and streamlined clinical operations in the medical field.',
   }}
 >
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "Navix AI",
+      "alternateName": "NavixScribe",
+      "applicationCategory": "AI Powered Healthcare Software",
+      "description": "Support your documentation needs and, therefore, your life and business. Navix AI pioneers the future of behavioral health with cutting-edge AI tools, revolutionizing processes across clinical, medical, marketing, and administrative departments. Trust in a solution crafted by experts with over 50 years of combined experience in behavioral health and medicine.",
+      "url": "https://www.navixhealth.com/navix-ai",
+      "creator": {
+        "@type": "Organization",
+        "name": "Navix Health",
+        "url": "https://www.navixhealth.com"
+      },
+      "offers": [
+        {
+          "@type": "Offer",
+          "name": "Free Trial",
+          "price": "$0",
+          "priceCurrency": "USD",
+          "url": "https://www.navixhealth.com/pricing"
+        },
+        {
+          "@type": "Offer",
+          "name": "Professional - AI-Powered Features",
+          "price": "$58.99/Month",
+          "priceCurrency": "USD",
+          "url": "https://www.navixhealth.com/pricing"
+        },
+        {
+          "@type": "Offer",
+          "name": "Entry - AI-Powered Features",
+          "price": "$14.99/Month",
+          "priceCurrency": "USD",
+          "url": "https://www.navixhealth.com/pricing"
+        }
+      ],
+      "featureList": [
+        "Unlimited Transcription",
+        "NavixScribe",
+        "Note Writer + Note Re-Writer",
+        "Summarizer",
+        "Blogs and Articles",
+        "Diagnostic Codes"
+      ]
+    }
+  </script>
+
   <NavixAIPage />
 </Layout>
