@@ -12146,6 +12146,10 @@ figcaption {
    Lists
 =========================== */
 
+.linkColor{
+  color: #c1986d;
+}
+
 .NH,
 .nx-ul,
 .nxx-ul,
