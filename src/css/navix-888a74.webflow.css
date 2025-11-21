@@ -12270,6 +12270,7 @@ figcaption {
   padding: 20px;
   border-radius: 12px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  text-align: center;
 }
 
 /* ===========================
@@ -12281,8 +12282,9 @@ figcaption {
 }
 
 .navixh-subsections {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; /* CENTER ITEMS */
   gap: 30px;
 }
 
@@ -12292,12 +12294,16 @@ figcaption {
   border-radius: 12px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+  flex: 0 1 calc(50% - 30px); /* 2 items per row */
+  max-width: calc(50% - 30px); /* ensure perfect 2 column layout */
 }
 
 .navixh-subsection:hover {
   transform: translateY(-5px);
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
 }
+
 
 /* ===========================
    Integration Items
@@ -12367,29 +12373,46 @@ figcaption {
 /* ===========================
    Responsive
 =========================== */
+/* ---------------------- */
+/*    RESPONSIVE PART     */
+/* ---------------------- */
+
+/* 992px — Tablet */
 @media (max-width: 992px) {
   .navixh-subsections {
-    grid-template-columns: 1fr;
+    justify-content: center;
   }
+
+  /* 1 column */
+  .navixh-subsection {
+    flex: 0 1 100%;
+    max-width: 100%;
+  }
+
   .navixh-section {
     padding: 40px 15px;
   }
+
   .navixh-heading {
     font-size: 28px;
     margin-bottom: 30px;
   }
+
   .navixh-subheading {
     font-size: 20px;
   }
+
   .navixh-paragraph,
   .navixh-list li {
     font-size: 15px;
   }
 }
 
+
+/* 768px — Mobile */
 @media (max-width: 768px) {
-  .subsections-nx {
-    flex-direction: column;
+  .navixh-subsections {
+    flex-direction: column; /* stack cards */
     gap: 20px;
   }
 
@@ -12403,8 +12426,6 @@ figcaption {
     padding: 10px 12px;
   }
 }
-
-
 
 
 #w-node-_2032913b-10ee-0760-1e27-ef710d5b751e-0d5b74f4 {

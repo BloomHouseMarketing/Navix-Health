@@ -1,0 +1,73 @@
+---
+import { Image } from 'astro:assets'
+import privatePracticeHeaderImg from '../assets/images/navix-privatepractice.png'
+---
+
+<main class="main-wrapper">
+  <section class="section-prof-hero">
+    <div class="padding-global padding-section-medium cc-prof">
+      <div class="w-layout-blockcontainer container w-container">
+        <div class="prof-hero-wrapper">
+          <div class="prof-head-block">
+            <h1 class="prof-head">
+              <span class="text-span-3">Healthcare CRM Software Built</span><br
+              />
+              for Behavioral Health Admissions
+            </h1>
+            <h2 class="heading-style-h2 cc-prof">
+              Transform Your Admissions Process With Purpose-Built Healthcare
+              CRM Software
+            </h2>
+          </div>
+          <div class="abt-para-block">
+            <p class="text-size-small">
+              Navix CRM is the leading healthcare CRM software designed
+              specifically for addiction treatment centers and behavioral health
+              facilities. Unlike generic platforms that force you to adapt your
+              workflows, Navix is purpose-built for the unique challenges of
+              behavioral health admissions - from first inquiry to bed
+              assignment and beyond.
+            </p>
+
+            <!-- First Row: Links (Horizontal) -->
+            <ul class="nx-ul nx-ul-links NH">
+              <li class="nx-li NH"><a href="#">Request a Demo</a></li>
+              <li class="nx-li NH"><a href="/pricing">See Pricing</a></li>
+            </ul>
+
+            <!-- Second Row: Plain Items (Horizontal) -->
+            <ul class="nx-ul nx-ul-items NH">
+              <li class="nx-li NH">HIPAA Compliant</li>
+              <li class="nx-li NH">SOC 2 Certified</li>
+              <li class="nx-li NH">4.8★ G2 Rating</li>
+            </ul>
+          </div>
+        </div>
+        <div class="prof-img-block">
+          <Image
+            src={privatePracticeHeaderImg}
+            width={1280}
+            alt="Image of two professionals discussing"
+            class="software-img"
+            style="height: auto;"
+          />
+        </div>
+      </div>
+    </div>
+  </section>
+
+   <section class="padding-global padding-section-medium cc-prof contact_sec">
+    <h2 class="section-heading-nx">
+      <strong>Admissions Teams Are Drowning in Manual Work</strong>
+    </h2>
+    <p class="subparagraph-nx">
+      Your admissions coordinators shouldn't spend half their day stuck on hold with insurance companies. Every minute wasted on manual verification is a minute a patient waits for life-changing treatment. When referrals get lost in spreadsheets and leads slip through the cracks, you're not just losing revenue - you're missing opportunities to help people in crisis.
+    </p>
+
+    <p class="subparagraph-nx">
+      Without unified behavioral health admissions software, your team operates in the dark. Marketing can't prove ROI. Admissions can't track conversion rates. Leadership lacks the visibility needed for strategic decisions. Meanwhile, competitors with modern systems are converting leads faster and growing smarter.
+    </p>
+  </section>
+
+  
+</main>
