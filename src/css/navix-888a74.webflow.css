@@ -12260,12 +12260,12 @@ figcaption {
 .subsections-nx {
   display: flex;
   flex-wrap: wrap;
-  gap: 30px;
-  justify-content: space-between;
+  gap: 40px;
+  justify-content: center;
 }
 
 .subsection-nx {
-  flex: 1 1 300px;
+  flex: 0 0 calc(33.33% - 30px);
   background-color: #fff;
   padding: 20px;
   border-radius: 12px;
@@ -12373,11 +12373,6 @@ figcaption {
 /* ===========================
    Responsive
 =========================== */
-/* ---------------------- */
-/*    RESPONSIVE PART     */
-/* ---------------------- */
-
-/* 992px — Tablet */
 @media (max-width: 992px) {
   .navixh-subsections {
     justify-content: center;
@@ -12406,10 +12401,13 @@ figcaption {
   .navixh-list li {
     font-size: 15px;
   }
+
+  .subsection-nx {
+    flex: 0 0 calc(50% - 30px);
+    max-width: calc(50% - 30px);
+  }
 }
 
-
-/* 768px — Mobile */
 @media (max-width: 768px) {
   .navixh-subsections {
     flex-direction: column; /* stack cards */
@@ -12424,6 +12422,15 @@ figcaption {
 
   .integration-item {
     padding: 10px 12px;
+  }
+
+  .subsections-nx {
+    justify-content: center;
+  }
+
+  .subsection-nx {
+    flex: 0 0 100%;
+    max-width: 100%;
   }
 }
 
