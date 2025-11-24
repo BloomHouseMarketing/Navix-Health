@@ -1,46 +1,13 @@
 {
   "redirects": [
     {
-      "source": "/news",
-      "destination": "/blogs",
-      "permanent": true
-    },
-    {
-      "source": "/news/disrupt-magazine-features-navix-health-inc-the-future-of-behavioral-health-facilities-lies-in-ai",
-      "destination": "/blogs/navix-health-disrupt-magazine-the-future-of-behavioral-health-facilities-lies-in-a",
-      "permanent": true
-    },
-    {
-      "source": "/news/chelseas-journey-with-navix-health",
-      "destination": "/blogs/chelsea-navix-health-journey",
-      "permanent": true
-    },
-    {
-      "source": "/news/unveiling-navixai-tm",
-      "destination": "/blogs/unveiling-navix-ai",
-      "permanent": true
-    },
-    {
-      "source": "/news/navix-health-partners-with-sobrsafe-for-advanced-alcohol-monitoring-in-digital-healthcare",
-      "destination": "/blogs/navix-health-sobrsafe-for-advanced-alcohol-monitoring",
-      "permanent": true
-    },
-    {
-      "source": "/news/new-york-weekly-featured-navix-health-advancing-behavioral-health-software",
-      "destination": "/blogs/navix-health-new-york-weekly-advancing-behavioral-health-software",
-      "permanent": true
-    },
-    {
-      "source": "/news/navix-healths-innovative-approach-featured-in-msn",
-      "destination": "/blogs/navix-health-msn-feature",
-      "permanent": true
-    },
-    {
       "source": "/:path+/",
       "destination": "/:path",
       "permanent": true
     }
   ],
+
+
   "headers": [
     {
       "source": "/(.*)",
@@ -53,3 +20,5 @@
     }
   ]
 }
+
+
