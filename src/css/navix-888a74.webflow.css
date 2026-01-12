@@ -3,6 +3,57 @@
   --white: white;
 }
 
+/* integration pages style start  */
+
+.demoBtn {
+  display: flex;
+  gap: 30px;
+  margin-top: 30px;
+  flex-wrap: wrap;
+}
+
+.VISUALIZATION {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-bottom: 30px;
+}
+
+.margn {
+  margin-top: 80px;
+}
+
+.marg {
+  display: flex;
+  flex-direction: column;
+  gap: 80px;
+}
+
+.subparagraph-nx .more-text {
+  display: none;
+}
+
+.see-more-btn {
+  background: none;
+  border: none;
+  color: #ae8a84;
+  cursor: pointer;
+  font-weight: 600;
+  padding: 0;
+  margin-top: 8px;
+}
+
+.see-more-btn:hover {
+  text-decoration: underline;
+}
+
+.is-hidden {
+  display: none;
+}
+
+/* integration pages style end  */
+
+
 .w-layout-blockcontainer {
   max-width: 940px;
   margin-left: auto;
@@ -2981,7 +3032,7 @@ figcaption {
 
 .prof-head {
   letter-spacing: -3.2px;
-  font-size: 5rem;
+  font-size: 4.25rem;
   font-weight: 600;
   line-height: 1;
 }
@@ -3954,7 +4005,7 @@ figcaption {
 
 .excellence-head {
   letter-spacing: -2.4px;
-  font-size: 3.75rem;
+  font-size: 3.55rem;
   font-weight: 600;
   line-height: 1;
   display: block;
@@ -12223,10 +12274,10 @@ figcaption {
 =========================== */
 .section-heading-nx,
 .navixh-heading {
-  font-size: 36px;
+  font-size: 3.55rem;
   font-weight: bold;
   margin-bottom: 20px;
-  text-align: center;
+  /* text-align: center; */
   color: #222;
 }
 
@@ -12260,9 +12311,9 @@ figcaption {
 .subsections-nx {
   display: flex;
   flex-wrap: wrap;
-  gap: 40px;
+  gap: 20px;
   justify-content: center;
-  margin-top: 20px;
+  margin-top: 50px;
 }
 
 .subsection-nx {
@@ -12272,6 +12323,16 @@ figcaption {
   border-radius: 12px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
   text-align: center;
+}
+
+.subsection-nxc {
+  flex: 0 0 calc(25% - 30px);
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  text-align: center;
+  border: 1px solid #cecdcd;
 }
 
 /* ===========================
@@ -12503,11 +12564,20 @@ figcaption {
 /* ===========================
    Responsive
 =========================== */
+
+@media (max-width: 1200px) {
+    .subsection-nxc {
+    flex: 0 0 calc(50% - 30px);
+    max-width: calc(50% - 30px);
+  }
+}
+
 @media (max-width: 1024px) {
   .plans-nx {
     gap: 15px;
   }
 }
+
 
 @media (max-width: 992px) {
   .navixh-subsections {
@@ -12575,6 +12645,10 @@ figcaption {
   }
 
   .subsection-nx {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+  .subsection-nxc {
     flex: 0 0 100%;
     max-width: 100%;
   }
