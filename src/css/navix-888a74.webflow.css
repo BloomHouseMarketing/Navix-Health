@@ -5,6 +5,11 @@
 
 /* integration pages style start  */
 
+.privacy-date {
+  margin-top: 10px;
+  font-size: 14px;
+}
+
 .demoBtn {
   display: flex;
   gap: 30px;
