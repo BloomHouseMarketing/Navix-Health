@@ -2355,7 +2355,7 @@ figcaption {
   z-index: 11;
   width: 50%;
   height: 702px;
-  background-image: url('../images/dylan-gillis-KdeqA3aTnBY-unsplash-1.png');
+  background-image: url('/images/dylan-gillis-KdeqA3aTnBY-unsplash-1.png');
   background-position: 50%;
   background-repeat: no-repeat;
   background-size: cover;
@@ -2369,7 +2369,7 @@ figcaption {
 }
 
 .splide__slide.cc-1 {
-  background-image: url('../images/NavixHealth-Ad-Creative-freelancer-working-on-distance-on-laptop-drinking-1.png');
+  background-image: url('/images/NavixHealth-Ad-Creative-freelancer-working-on-distance-on-laptop-drinking-1.png');
 }
 
 .slide-name {
@@ -3239,7 +3239,7 @@ figcaption {
 }
 
 .trial-wrapper.cc-1 {
-  background-image: url('../images/Group-1000000863-2.png'),
+  background-image: url('/images/Group-1000000863-2.png'),
     linear-gradient(#151a1e, #151a1e);
   background-position:
     50%,
@@ -3950,7 +3950,7 @@ figcaption {
 }
 
 .section-challenge {
-  background-image: url('../images/image_7_1_1.png'),
+  background-image: url('/images/image_7_1_1.png'),
     linear-gradient(#c2996c, #c2996c);
   background-position:
     100% 100%,
@@ -4340,7 +4340,7 @@ figcaption {
   grid-column-gap: 12px;
   grid-row-gap: 12px;
   background-color: #1f2d36;
-  background-image: url('../images/Frame-1000000820-1.png');
+  background-image: url('/images/Frame-1000000820-1.png');
   background-position: 0 0;
   background-size: auto;
   flex-direction: column;
@@ -4376,7 +4376,7 @@ figcaption {
 
 .section-price {
   background-color: #151a1e;
-  background-image: url('../images/Frame-1000000820.png');
+  background-image: url('/images/Frame-1000000820.png');
   background-position: 0 0;
   background-size: auto;
 }
@@ -4637,7 +4637,7 @@ figcaption {
 .select-field {
   height: 56px;
   background-color: rgba(0, 0, 0, 0);
-  background-image: url('../images/free-arrow-down-icon-3101-thumb.png');
+  background-image: url('/images/free-arrow-down-icon-3101-thumb.png');
   background-position: 99%;
   background-repeat: no-repeat;
   background-size: 15px 15px;
@@ -4962,7 +4962,7 @@ figcaption {
 
 .section-trans {
   background-color: #151a1e;
-  background-image: url('../images/Group-1000000863.png');
+  background-image: url('/images/Group-1000000863.png');
   background-position: 0 0;
   background-repeat: no-repeat;
   background-size: cover;
@@ -6205,7 +6205,7 @@ figcaption {
 
 .certified-wrapper {
   background-color: #151a1e;
-  background-image: url('../images/Group-1000000888.png');
+  background-image: url('/images/Group-1000000888.png');
   background-position: 50%;
   background-repeat: no-repeat;
   background-size: cover;
@@ -6356,7 +6356,7 @@ figcaption {
   grid-column-gap: 40px;
   grid-row-gap: 40px;
   background-color: rgba(233, 229, 226, 0.5);
-  background-image: url('../images/Waves-2-1.png');
+  background-image: url('/images/Waves-2-1.png');
   background-position: 100%;
   background-repeat: no-repeat;
   background-size: auto;
@@ -6841,7 +6841,7 @@ figcaption {
 .card-block {
   z-index: 1;
   height: 544px;
-  background-image: url('../images/Rectangle-75.png');
+  background-image: url('/images/Rectangle-75.png');
   background-position: 50%;
   background-repeat: no-repeat;
   background-size: cover;
@@ -6855,7 +6855,7 @@ figcaption {
 
 .card-block.cc-mt {
   background-color: #374651;
-  background-image: url('../images/NavixHealth-Ad-Creative-freelancer-working-on-distance-on-laptop-drinking-1-1.png');
+  background-image: url('/images/NavixHealth-Ad-Creative-freelancer-working-on-distance-on-laptop-drinking-1-1.png');
   top: -128px;
 }
 
@@ -6865,7 +6865,7 @@ figcaption {
 }
 
 .card-block.cc-2 {
-  background-image: url('../images/Rectangle-75-1.png');
+  background-image: url('/images/Rectangle-75-1.png');
 }
 
 .product-feature-head {
