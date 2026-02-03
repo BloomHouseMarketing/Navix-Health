@@ -7,7 +7,7 @@ const items = data.items.sort(
 );
 
 const images = import.meta.glob<{ default: ImageMetadata }>(
-  '../../public/images/newsImages/*.{jpeg,jpg,png,gif,webp}'
+  '/images/newsImages/*.{jpeg,jpg,png,gif,webp}'
 );
 
 async function resolveImages() {

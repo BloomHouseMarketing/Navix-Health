@@ -8,7 +8,7 @@ const items = data.items.sort(
 );
 
 const images = import.meta.glob<{ default: ImageMetadata }>(
-  '../../public/images/blogImages/*.{jpeg,jpg,png,gif,webp}'
+  '/images/blogImages/*.{jpeg,jpg,png,gif,webp}'
 );
 
 async function resolveImages() {
@@ -132,7 +132,7 @@ const resolvedImages = await resolveImages();
             </div>
           </div>
           <div class='inbox-img-block'>
-            <img src='images/Group-1000000891-2.png' loading='eager' alt='' />
+            <img src='/images/Group-1000000891-2.png' loading='eager' alt='' />
             <div class='html-embed-25 w-embed'>
               <svg
                 xmlns='http://www.w3.org/2000/svg'
